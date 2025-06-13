@@ -97,3 +97,16 @@
   top: -50vh;
 }
 
+.why-lng-container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.why-lng-container .card {
+  background-color: #eef3f2;
+  padding: 20px;
+  font-size: var(--font-18);
+  color: var(--black);
+  width: 25%;
+}
+

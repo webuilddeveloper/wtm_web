@@ -11,6 +11,7 @@
   animation-timeline: scroll();
   animation-range: entry 5% contain 14%;
   animation-fill-mode: both;
+  border-radius: 10px;
 }
 
 .logo-header {
@@ -51,11 +52,11 @@ a:hover {
   z-index: 99999;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  // width: 100%;
   max-width: 100vw;
 
   /* Optional background & padding */
-  background: white;
+  // background: white;
   padding: 16px;
 }
 
