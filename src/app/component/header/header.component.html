@@ -1,13 +1,13 @@
-<div class="div-header">
+<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : 'sticky'}">
   <div class="header">
     <img src="./assets/img/logoMain.png" alt="" class="logo-header">
     <div class="menu-group">
-      <a href="">หน้าแรก</a>
-      <a href="">ข่าวประชาสัมพันธ์</a>
+      <a routerLink="">หน้าแรก</a>
+      <a href="">ข่าวสารและกิจกรรม</a>
       <a href="">ผลิตภัณฑ์และบริการ</a>
       <a routerLink="/about">เกี่ยวกับเรา</a>
       <a href="">ติดต่อเรา</a>
     </div>
   </div>
-  <div class="scroll-watcher"></div>
+  <!-- <div class="scroll-watcher"></div> -->
 </div>
