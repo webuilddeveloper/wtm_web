@@ -4,12 +4,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'news', component: NewsComponent },
   { path: 'product-and-service', component: ProductAndServiceComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
