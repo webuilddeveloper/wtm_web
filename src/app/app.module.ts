@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './component/header/header.component';
 import { GoToTopComponent } from './component/go-to-top/go-to-top.component';
 import { AboutComponent } from './pages/about/about.component';
+import { NewsComponent } from './pages/news/news.component';
+import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { AboutComponent } from './pages/about/about.component';
     HomeComponent,
     HeaderComponent,
     GoToTopComponent,
-    AboutComponent
+    AboutComponent,
+    NewsComponent,
+    ProductAndServiceComponent
   ],
   imports: [
     BrowserModule,
