@@ -33,10 +33,10 @@ export class HeaderComponent {
     // console.log('clientHeight ===>>>> ',document.documentElement.clientHeight);
     // console.log('offsetHeight ===>>>> ',document.documentElement.offsetHeight);
 
-    if ((window.pageYOffset || document.documentElement.scrollTop) > 90) {
+    if ((window.pageYOffset || document.documentElement.scrollTop) > 1) {
       this.scrollPosition = true;
     } else if (
-      (window.pageYOffset || document.documentElement.scrollTop) < 90
+      (window.pageYOffset || document.documentElement.scrollTop) < 1
     ) {
       this.scrollPosition = false;
     }
