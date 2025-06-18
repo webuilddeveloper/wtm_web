@@ -9,6 +9,8 @@ import { GoToTopComponent } from './component/go-to-top/go-to-top.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
@@ -20,12 +22,16 @@ import { FooterComponent } from './component/footer/footer.component';
     AboutComponent,
     NewsComponent,
     ProductAndServiceComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
   ],
+  exports: [GoToTopComponent, FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
