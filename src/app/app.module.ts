@@ -9,6 +9,7 @@ import { GoToTopComponent } from './component/go-to-top/go-to-top.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductAndServiceComponent } from './pages/product-and-service/product-
     GoToTopComponent,
     AboutComponent,
     NewsComponent,
-    ProductAndServiceComponent
+    ProductAndServiceComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
