@@ -8,6 +8,7 @@
 .div-content {
   max-width: 1440px;
   padding: 80px 100px;
+  width: -webkit-fill-available;
 }
 
 .title {
@@ -83,6 +84,7 @@
 .description {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .description .title {
@@ -94,11 +96,12 @@
 .card-product {
   display: flex;
   // flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(81, 171, 79, 0.12);
   border: 1px solid rgba(81, 171, 79, 0.1);
-  padding: 20px;
+  // padding: 20px;
+  width: -webkit-fill-available;
 }
 
 .div-group-service {
@@ -117,14 +120,14 @@
   border-radius: 50px;
 }
 
-.div-card-service {
-  position:relative;
-  // transition: var(--transition);
-  // visibility: visible;
-  // animation-duration: 1s;
-  // animation-delay: 0.25s;
-  // animation-name: fadeInUp;
-}
+// .div-card-service {
+//   position:relative;
+//   // transition: var(--transition);
+//   // visibility: visible;
+//   // animation-duration: 1s;
+//   // animation-delay: 0.25s;
+//   // animation-name: fadeInUp;
+// }
 
 .card-service {
   display: flex;
@@ -181,4 +184,25 @@
 .icon-btn-sevice {
   color: white;
   font-size: 35px;
+}
+
+.card-performance {
+  display: flex;
+  // flex-direction: column;
+  gap: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(81, 171, 79, 0.12);
+  border: 1px solid rgba(81, 171, 79, 0.1);
+  // padding: 20px;
+  width: -webkit-fill-available;
+}
+
+.img-performance {
+  width: 200px;
+  height: -webkit-fill-available;
+}
+
+.img-performance img {
+  width: -webkit-fill-available;
+  border-radius: 10px;
 }
