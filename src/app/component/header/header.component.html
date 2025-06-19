@@ -1,14 +1,16 @@
-<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : 'inherit'}">
+<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : position}">
   <div class="header">
-    <img src="./assets/img/logoMain.png" alt="" class="logo-header">
-    <div class="menu-group">
-      <a routerLink="">หน้าแรก</a>
-      <a href="/news">ข่าวสารและกิจกรรม</a>
-      <a href="/product-and-service">ผลิตภัณฑ์และบริการ</a>
-      <a routerLink="/about">เกี่ยวกับเรา</a>
-      <a routerLink="/contact">ติดต่อเรา</a>
+    <div class="content-header">
+      <img src="./assets/img/logoMain.png" alt="" class="logo-header">
+      <div class="menu-group">
+        <a routerLink="">หน้าแรก</a>
+        <a href="/news">ข่าวสารและกิจกรรม</a>
+        <a href="/product-and-service">ผลิตภัณฑ์และบริการ</a>
+        <a routerLink="/about">เกี่ยวกับเรา</a>
+        <a routerLink="/contact">ติดต่อเรา</a>
+      </div>
     </div>
   </div>
   <!-- <div class="scroll-watcher"></div> -->
 </div>
-<div [ngStyle]="{'margin-bottom': scrollPosition ? '112px' : '0'}">&nbsp;</div>
+<div *ngIf="isActiveMarginBTM" [ngStyle]="{'margin-bottom': scrollPosition ? '112px' : '0'}">&nbsp;</div>

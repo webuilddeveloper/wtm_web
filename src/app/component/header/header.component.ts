@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
@@ -8,11 +8,27 @@ import { filter } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private router: Router) {
+
+  isActiveMarginBTM: boolean = true;
+  position: String = "inherit";
+  constructor(private router: Router, private route: ActivatedRoute) {
+
+
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' }); // เลื่อนไปบนสุดแบบ smooth
+      });
+
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          // this.currentPath = event.urlAfterRedirects;
+          if (event.urlAfterRedirects == '/') {
+            this.isActiveMarginBTM = false;
+            this.position = "absolute"
+          }
+          console.log('Current path:', event.urlAfterRedirects);
+        }
       });
   }
 
@@ -40,5 +56,9 @@ export class HeaderComponent {
     ) {
       this.scrollPosition = false;
     }
+  }
+
+  ngOnInit(): void {
+
   }
 }

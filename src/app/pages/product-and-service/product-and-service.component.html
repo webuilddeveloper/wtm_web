@@ -1,6 +1,6 @@
 <div class="main-product">
   <div class="div-title">
-    <span class="title">ผลิตภัณฑ์และบริการ</span>
+    <span class="title">รายละเอียด</span>
   </div>
   <div class="div-content">
     <span class="title">ผลิตภัณฑ์ของเรา</span>
@@ -13,7 +13,7 @@
           <div class="description">
             <span class="title">ECU และชุดอุปกรณ์ติดตั้ง (LNG Convertion)</span>
             <div class="spacer"></div>
-            <button class="btn-bottom">
+            <button class="btn-bottom" (click)="gotoDetails(i)">
               <span>ดูเพิ่มเติม </span>
               <i class="material-icons">arrow_forward</i>
             </button>
@@ -150,4 +150,26 @@
 
     </div>
   </div>
+
+  <div class="div-content">
+    <span class="title">ผลงงานจากเรา</span>
+    <div class="row">
+      <div class="product col-12 col-md-6 col-lg-6 d-flex" *ngFor="let i of productList; let idx = index;">
+        <div class="card-product">
+          <div class="img-product">
+            <img src="{{i.imageUrl}}" alt="">
+          </div>
+          <div class="description">
+            <span class="title">ECU และชุดอุปกรณ์ติดตั้ง (LNG Convertion)</span>
+            <div class="spacer"></div>
+            <button class="btn-bottom" (click)="gotoDetails(i)">
+              <span>ดูเพิ่มเติม </span>
+              <i class="material-icons">arrow_forward</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

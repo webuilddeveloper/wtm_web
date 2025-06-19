@@ -12,6 +12,7 @@ import { ProductAndServiceComponent } from './pages/product-and-service/product-
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/footer/footer.component';
+import { ProductAndServiceDetailsComponent } from './pages/product-and-service-details/product-and-service-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './component/footer/footer.component';
     NewsComponent,
     ProductAndServiceComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    ProductAndServiceDetailsComponent
   ],
   imports: [
     BrowserModule,
