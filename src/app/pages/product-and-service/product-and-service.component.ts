@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
   selector: 'app-product-and-service',
@@ -8,9 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductAndServiceComponent {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private serviceProvider: ServiceProvider) {
 
   }
+  performanceList: any = [];
   productList: any = [
     {
       code: "0",
@@ -29,8 +31,30 @@ export class ProductAndServiceComponent {
     },
   ];
 
+  ngOnInit(): void {
+    this.productRead();
+  }
+
   gotoDetails(param: any): void {
     this.router.navigate(["product-and-service-details", param], {
+      // skipLocationChange: true,
+    });
+  }
+
+  productRead() {
+    this.serviceProvider
+      .post('m/product/read', { limit: 999 })
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        console.log(model.objectData);
+
+        this.performanceList = model.objectData;
+      });
+  }
+
+  gotoPerformanceDetails(param: String): void {
+    this.router.navigate(["performance-details", param], {
       // skipLocationChange: true,
     });
   }

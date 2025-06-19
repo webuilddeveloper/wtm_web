@@ -8,6 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
 
 import { ProductAndServiceDetailsComponent } from './pages/product-and-service-details/product-and-service-details.component';
+import { PerformanceDetailsComponent } from './pages/performance-details/performance-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,8 +17,8 @@ const routes: Routes = [
   { path: 'product-and-service', component: ProductAndServiceComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'newsdetail/:code', component: NewsDetailComponent },
-
   { path: 'product-and-service-details', component: ProductAndServiceDetailsComponent },
+  { path: 'performance-details/:code', component: PerformanceDetailsComponent },
 ];
 
 @NgModule({

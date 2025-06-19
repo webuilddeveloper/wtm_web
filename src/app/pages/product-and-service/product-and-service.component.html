@@ -154,15 +154,15 @@
   <div class="div-content">
     <span class="title">ผลงงานจากเรา</span>
     <div class="row">
-      <div class="product col-12 col-md-6 col-lg-6 d-flex" *ngFor="let i of productList; let idx = index;">
-        <div class="card-product">
-          <div class="img-product">
+      <div class="product col-12 col-md-6 col-lg-6 d-flex" *ngFor="let i of performanceList; let idx = index;">
+        <div class="card-performance">
+          <div class="img-performance">
             <img src="{{i.imageUrl}}" alt="">
           </div>
           <div class="description">
-            <span class="title">ECU และชุดอุปกรณ์ติดตั้ง (LNG Convertion)</span>
+            <span class="title">{{i.title}}</span>
             <div class="spacer"></div>
-            <button class="btn-bottom" (click)="gotoDetails(i)">
+            <button class="btn-bottom" (click)="gotoPerformanceDetails(i.code)">
               <span>ดูเพิ่มเติม </span>
               <i class="material-icons">arrow_forward</i>
             </button>

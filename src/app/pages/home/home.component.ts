@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
   selector: 'app-home',
@@ -72,6 +74,12 @@ export class HomeComponent {
     // },
   ];
 
+  constructor(
+    private route: ActivatedRoute,
+    private serviceProvider: ServiceProvider,
+    private router: Router,
+  ) {}
+
   @ViewChild('animatedBox') box!: ElementRef;
   isVisible = false;
 
@@ -88,20 +96,23 @@ export class HomeComponent {
     observer.observe(this.box.nativeElement);
   }
 
-  // ngAfterViewInit(): void {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add('show');
-  //       }
-  //     });
-  //   });
+  ngOnInit(): void {
+    this.readNews();
+  }
 
-  //   const el = document.getElementById('divGroupService');
-  //   if (el){
-  //      observer.observe(el);
-  //      console.log('>>>>',el);
-  //     };
+  readNews() {
+    this.serviceProvider
+      .post('m/news/read', {})
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        this.newsList = model.objectData;
+      });
+  }
 
-  // }
+  gotoNewsPage() {
+    this.router.navigate(["performance-details"], {
+      // skipLocationChange: true,
+    });
+  }
 }

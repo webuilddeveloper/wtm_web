@@ -1,0 +1,87 @@
+<div class="main-product">
+  <!-- <div class="div-title">
+    <span class="title">รายละเอียดผลิตภัณฑ์</span>
+  </div> -->
+  <div class="div-img-banner">
+    <img src="{{model.imageBanner}}" alt="" class="img-banner">
+  </div>
+
+  <div class="div-content">
+    <span class="title">{{model.title}}</span>
+
+    <div class="row d-flex">
+      <div class="col-12 col-md-6">
+        <div class="text-content">
+          <div class="spacer"></div>
+          <div class="div-progress">
+            <span class="title-statue">
+              ความคืบหน้าการดำเนินการ :
+            </span>
+            <progress id="progressBar" max="100" value="{{model.progress}}"></progress>
+          </div>
+          <div class="div-progress">
+            <span class="title-statue">
+              สถานะการดำเนินการ :
+            </span>
+            <span class="text-statue" *ngIf="model.progress == '100'">
+              สำเร็จแล้ว
+            </span>
+            <span class="text-statue" *ngIf="model.progress != '100'">
+              กำลังดำเนินการ
+            </span>
+          </div>
+          <div class="spacer"></div>
+        </div>
+        <div class="text-content">
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <h3>
+            คุณสมบัติพื้นฐาน
+          </h3>
+          <div class="func-item" *ngFor="let i of model.newFunctionList; let idx = index;">
+            <li>{{i.title}}</li>
+            <span>{{i.description}}</span>
+            <div class="spacer"></div>
+          </div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="div-img-main">
+          <img src="{{model.imageUrl}}" alt="" class="img-main">
+        </div>
+      </div>
+    </div>
+
+    <div class="text-content">
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <h3>
+        รายละเอียด
+      </h3>
+      <span *ngIf="model.description != ''">{{model.description}}</span>
+      <span *ngIf="model.description == ''">-</span>
+      <div class="spacer"></div>
+    </div>
+
+    <div class="text-content">
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <h3>
+        รูปภาพเพิ่มเติม
+      </h3>
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3" *ngFor="let i of model.image; let idx = index;">
+          <div class="div-img-more">
+            <img src="{{i.imageUrl}}" alt="" class="img-more">
+          </div>
+        </div>
+
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+  </div>
+
+
+</div>

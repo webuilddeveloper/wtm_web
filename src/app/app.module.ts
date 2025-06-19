@@ -15,6 +15,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
 
 import { ProductAndServiceDetailsComponent } from './pages/product-and-service-details/product-and-service-details.component';
+import { PerformanceDetailsComponent } from './pages/performance-details/performance-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductAndServiceDetailsComponent } from './pages/product-and-service-d
     FooterComponent,
     ContactComponent,
     NewsDetailComponent,
-    ProductAndServiceDetailsComponent
+    ProductAndServiceDetailsComponent,
+    PerformanceDetailsComponent
   ],
   imports: [
     BrowserModule,
