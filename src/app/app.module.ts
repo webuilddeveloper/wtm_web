@@ -11,6 +11,9 @@ import { NewsComponent } from './pages/news/news.component';
 import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     NewsComponent,
     ProductAndServiceComponent,
-    ContactComponent
+    ContactComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
