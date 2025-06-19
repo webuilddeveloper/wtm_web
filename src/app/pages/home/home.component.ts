@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -52,23 +52,56 @@ export class HomeComponent {
       describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
       imageUrl: "./../../../assets/img/logoMain.png"
     },
-    {
-      code: "3",
-      title: "ข่าวสาร3",
-      describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
-      imageUrl: "./../../../assets/img/logoMain.png"
-    },
-    {
-      code: "4",
-      title: "ข่าวสาร4",
-      describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
-      imageUrl: "./../../../assets/img/logoMain.png"
-    },
-    {
-      code: "5",
-      title: "ข่าวสาร5",
-      describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
-      imageUrl: "./../../../assets/img/logoMain.png"
-    },
+    // {
+    //   code: "3",
+    //   title: "ข่าวสาร3",
+    //   describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
+    //   imageUrl: "./../../../assets/img/logoMain.png"
+    // },
+    // {
+    //   code: "4",
+    //   title: "ข่าวสาร4",
+    //   describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
+    //   imageUrl: "./../../../assets/img/logoMain.png"
+    // },
+    // {
+    //   code: "5",
+    //   title: "ข่าวสาร5",
+    //   describe: "รายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าวรายละเอียดข่าว",
+    //   imageUrl: "./../../../assets/img/logoMain.png"
+    // },
   ];
+
+  @ViewChild('animatedBox') box!: ElementRef;
+  isVisible = false;
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        this.isVisible = true;
+        observer.disconnect(); // ไม่ต้องตรวจซ้ำ
+      }
+    }, {
+      threshold: 0.5 // เห็น 50% ถึงจะถือว่าแสดง
+    });
+
+    observer.observe(this.box.nativeElement);
+  }
+
+  // ngAfterViewInit(): void {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('show');
+  //       }
+  //     });
+  //   });
+
+  //   const el = document.getElementById('divGroupService');
+  //   if (el){
+  //      observer.observe(el);
+  //      console.log('>>>>',el);
+  //     };
+
+  // }
 }

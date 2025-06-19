@@ -1,4 +1,4 @@
-<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : 'sticky'}">
+<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : 'inherit'}">
   <div class="header">
     <img src="./assets/img/logoMain.png" alt="" class="logo-header">
     <div class="menu-group">
@@ -11,3 +11,4 @@
   </div>
   <!-- <div class="scroll-watcher"></div> -->
 </div>
+<div [ngStyle]="{'margin-bottom': scrollPosition ? '112px' : '0'}">&nbsp;</div>

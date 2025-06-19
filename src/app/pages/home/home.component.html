@@ -83,26 +83,26 @@
           ประโยชน์ของ LNG พลังงานทางเลือกแห่งอนาคต
         </h2>
         <div class="spacer"></div>
-        <li>LNG มีบทบาทสำคัญในหลายอุตสาหกรรม ซึ่งปัจจุบันประเทศไทยมีการใช้ประโยชน์จาก LNG ทั้งการผลิตกระแสไฟฟ้่า
+        <span class="c-article">LNG มีบทบาทสำคัญในหลายอุตสาหกรรม ซึ่งปัจจุบันประเทศไทยมีการใช้ประโยชน์จาก LNG ทั้งการผลิตกระแสไฟฟ้่า
           ใช้ในภาคอุตสาหกรรม เช่น การผลิตเหล็ก การผลิตปุ๋ย และยังถูกใช้เป็นเชื้อเพลิงสำหรับยานพาหนะ
           เช่น รถบรรทุกในภาคการขนส่ง ที่ใช้ในเชื้อเพลิงดีเซล หรือติดแก๊ส CNG อยู๋แล้ว สามารถเปลี่ยนมาใช้เป็น LNG ได้
           ซึ่งตอบโจทย์มากกว่าทั้งในแง่ของค่าใช้จ่ายที่ลดลงเนื่องจากราคา LNG ถูกเชื้อเพลิงประเภทอื่น
           อีกทั้งการเติมแต่ละรอบใช้เวลาไม่นานประมาณ 10-15 นาที และสามารถวิ่งได้ระยะทางไกลถึง 1,000-1,400 กม.
           จึงช่วยประหยัดเวลาได้มากขึ้น เป็นต้น
-        </li>
-        <li>
-          ข้อดีของ LNG คือเป็น "พลังงานสะอาด" มีประสิทธิภาพสูง ทำให้เครื่องยนต์เกิดการเผาใหม้ที่สมบูรณ์
+        </span>
+        <span class="c-article">
+          ข้อดีของ LNG คือ เป็น "พลังงานสะอาด" มีประสิทธิภาพสูง ทำให้เครื่องยนต์เกิดการเผาใหม้ที่สมบูรณ์
           เป็นมิตรต่อสิ่งแวดล้อม สามารถใช้แทนน้ำมันดีเซล หรือก๊าช CNGได้ และปลอดภันกว่า เพราะหากเกิดการรั่วไหล LNG
           ซึ่งเบากว่าอากาศจะระเหยเป็นไอและลอยขึ้นสู่ชั้นบรรยากาศอย่างรวดเร็ว โดยไม่เหลือการตกค้างใด ๆในน้ำหรือดิน
           ส่วนการติดไฟหรือโอกาาสในการลุกไหม้จะเกิดขึ้นได้เฉพาะกรณีที่ LNG อยู่ในสถานะก๊าช มีระดับความเข้มข้นในอากาศ
           5-15%
           สภาพแวดล้อมปิด และมีประกายไฟเกิดขึ้นในบริเวณใกล้เคียง เป็นต้น
-        </li>
+        </span>
       </div>
     </div>
 
     <div class="content-1 service-bg">
-      <div class="div-content">
+      <div class="div-content box" [class.animate]="isVisible" #animatedBox>
         <h2 class="c-white">
           ผลิตภัณฑ์ และบริการ
         </h2>
@@ -111,17 +111,116 @@
         <div class="spacer"></div>
         <div class="spacer"></div>
         <div class="d-flex row div-group-service">
-          <div class="col-12 col-md-6 col-lg-4 d-flex" style="position:relative"
-            *ngFor="let i of serviceList; let idx = index;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
             <div class="card-service">
               <div class="service-head">
-                <img src="{{i.icon}}" alt="" class="service-icon">
+                <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
                 <span class="service-title">
-                  {{i.title}}
+                  ติดตั้ง
                 </span>
               </div>
               <span class="service-text">
-                {{i.describe}}
+                บริการรับติดแก๊ส LNG รถบรรทุก
+              </span>
+            </div>
+
+            <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-maintain.png" alt="" class="service-icon">
+                <span class="service-title">
+                  ตรวจสภาพ
+                </span>
+              </div>
+              <span class="service-text">
+                บริการรับตรวจเช็คสภาพ และซ่อมบำรุงระบบ
+              </span>
+            </div>
+
+            <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-recomance.png" alt="" class="service-icon">
+                <span class="service-title">
+                  จดทะเบียน
+                </span>
+              </div>
+              <span class="service-text">
+                บริการแนะนำการจดทะเบียน สำหรับรถใช้ก๊าช LNG
+              </span>
+            </div>
+
+            <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service" >
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
+                <span class="service-title">
+                  จัดจำหน่าย
+                </span>
+              </div>
+              <span class="service-text">
+                บริการจัดจำหน่ายชุดอุปกรณ์ถังก๊าช ชิ้นส่วน และอะไหล่ต่างๆ
+              </span>
+            </div>
+
+            <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">
+                <span class="service-title">
+                  สินเชื่อ
+                </span>
+              </div>
+              <span class="service-text">
+                บริการให้คำปรึกษาด้านสินเชื่อสำหรับการติดตั้งแก๊ส
+              </span>
+            </div>
+
+            <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-course.png" alt="" class="service-icon">
+                <span class="service-title">
+                  อบรม
+                </span>
+              </div>
+              <span class="service-text">
+                บริการคอร์สฝึกอบรมเกี่ยวกับ LNG
               </span>
             </div>
 
@@ -139,17 +238,17 @@
 
     <div class="content-1">
       <div class="div-content">
-        <div class="bg-deep">
-          <h2>
-            ข่าวสารและกิจกรรม
-          </h2>
-          <div class="spacer"></div>
-          <div class="spacer"></div>
-          <div class="spacer"></div>
-          <div class="d-flex row div-group-news">
-            <div class="col-12 col-md-6 col-lg-4 d-flex" style="position:relative"
-              *ngFor="let i of newsList; let idx = index;">
-              <div class="card-news">
+        <h2>
+          ข่าวสารและกิจกรรม
+        </h2>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="d-flex row">
+          <div class="col-12 col-md-6 col-lg-4 d-flex" style="position:relative"
+            *ngFor="let i of newsList.slice(0,3); let idx = index;">
+            <div class="card-news">
+              <div class="div-top-news">
                 <div class="div-img-news">
                   <img src="{{i.imageUrl}}" alt="" class="news-img">
                 </div>
@@ -160,13 +259,14 @@
                   {{i.describe}}
                 </span>
               </div>
-
-
+              <button class="read-news">อ่านเพิ่มเติม <i class="material-icons">arrow_forward</i></button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
+
 
 
 
@@ -177,4 +277,3 @@
 </div>
 
 <app-go-to-top></app-go-to-top>
-

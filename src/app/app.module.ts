@@ -11,8 +11,8 @@ import { NewsComponent } from './pages/news/news.component';
 import { ProductAndServiceComponent } from './pages/product-and-service/product-and-service.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './component/footer/footer.component';
 import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
-
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
     AboutComponent,
     NewsComponent,
     ProductAndServiceComponent,
+    FooterComponent,
     ContactComponent,
     NewsDetailComponent
   ],
@@ -31,7 +32,9 @@ import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
   ],
+  exports: [GoToTopComponent, FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
