@@ -12,6 +12,8 @@ import { ProductAndServiceComponent } from './pages/product-and-service/product-
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/footer/footer.component';
+import { NewsDetailComponent } from './pages/newsdetail/newsdetail.component';
+
 import { ProductAndServiceDetailsComponent } from './pages/product-and-service-details/product-and-service-details.component';
 
 @NgModule({
@@ -25,6 +27,7 @@ import { ProductAndServiceDetailsComponent } from './pages/product-and-service-d
     ProductAndServiceComponent,
     FooterComponent,
     ContactComponent,
+    NewsDetailComponent,
     ProductAndServiceDetailsComponent
   ],
   imports: [
