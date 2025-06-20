@@ -14,12 +14,34 @@
     rel="stylesheet">
   <!-- <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" /> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  </head>
+</head>
 
 <body>
   <app-root></app-root>
+
+  <div id="bn-root"></div>
+
+  <script>window.onload = function () { BN.init({ version: '1.0' }) }</script>
+  <script>
+      (function (d, s, id) {
+        var js, bjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://console.botnoi.ai/customerchat/index.js';
+        bjs.parentNode.insertBefore(js, bjs);
+      }(document, 'script', 'bn-jssdk'));
+  </script>
+
+  <div class="bn-customerchat" bot_id="6854d524cfc9e2305f142c51"
+    bot_logo="https://bn-sme-production-ap-southeast-1.s3.amazonaws.com/profile/e13440c4-5f3b-4d3a-850d-ea925bf15b4e.png"
+    bot_name="WTM Bot" theme_color="#000000" locale="th"
+    logged_in_greeting="สวัสดี ยินดีต้อนรับเข้าสู่ Live Chat WTM Bot ทำหน้าที่บริการ ต้องการสอบถามเรื่องอะไรค่ะ"
+    greeting_message="สวัสดี ยินดีต้อนรับเข้าสู่ Live Chat WTM Bot ทำหน้าที่บริการ ต้องการสอบถามเรื่องอะไรค่ะ"
+    default_open="false">
+  </div>
+
 </body>
 
 </html>
