@@ -345,7 +345,14 @@
   overflow: hidden;
   -webkit-line-clamp: 2;
   overflow-wrap: anywhere;
+}
 
+.hidden-des {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  overflow-wrap: anywhere;
 }
 
 .div-top-news {
