@@ -20,15 +20,15 @@ export class ProductAndServiceComponent {
       description: "รายละเอียดคร่าว ๆ",
       imageUrl: "./../../../assets/img/lng-mock.png"
     },
-    {
-      code: "1",
-      title: "ถังก๊าซ LNG มาตรฐาน (LNG Cylinder)",
-      description: "รายละเอียดคร่าว ๆ",
-      imageUrl: "./../../../assets/img/lng-mock.png",
-      image: [
+    // {
+    //   code: "1",
+    //   title: "ถังก๊าซ LNG มาตรฐาน (LNG Cylinder)",
+    //   description: "รายละเอียดคร่าว ๆ",
+    //   imageUrl: "./../../../assets/img/lng-mock.png",
+    //   image: [
 
-      ]
-    },
+    //   ]
+    // },
   ];
 
   ngOnInit(): void {

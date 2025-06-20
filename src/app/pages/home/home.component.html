@@ -34,10 +34,10 @@
           ใช้ในภาคอุตสาหกรรม และใช้เป็นเชื้อเพลิงสำหรับรถยนต์(LNG) ซึ่งส่วนใหญ่ไทยมีการนำเข้า LNG จากต่างประเทศ
           อาทิ เมียนมา กาตาร์ อินโดนีเซีย ออสเตรเลีย เป็นต้น เนื่องจาก LNG ที่ผลิตเองได้จากอ่าวไทยยังไม่เพียงพอ
         </span>
-      </div>
-    </div>
-    <div class="content-1">
-      <div class="div-content">
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
         <h2>
           คุณสมบัติเด่นของ LNG
         </h2>
@@ -46,6 +46,7 @@
         <li>เป้นมิตรต่อสิ่งแวดล้อม ลดการปล่อยคาร์บอนไดออกไซต์น้อยกว่า</li>
         <li>ด้วยคุณสมบัติที่เบากว่าอากาศจึงลอยขึ้นและแพร่กระจายในอากาศเมื่อเกิดการรั่วไหล</li>
         <li>ช่วยลดต้นทุนมากกว่าการใช้เชื้อเพลิงปิโตรเลียมอื่น ๆ เช่น น้ำมัน น้ำมันเตา</li>
+
       </div>
     </div>
 
@@ -255,9 +256,10 @@
                 <span class="news-title hidden-title">
                   {{i.title}}
                 </span>
-                <span class="news-text">
-                  {{i.describe}}
-                </span>
+                <div [innerHTML]="i.description" class="news-text hidden-des"></div>
+                <!-- <span class="news-text">
+                  {{i.description}}
+                </span> -->
               </div>
               <button class="read-news">อ่านเพิ่มเติม <i class="material-icons">arrow_forward</i></button>
             </div>

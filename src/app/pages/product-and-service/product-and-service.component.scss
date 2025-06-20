@@ -136,8 +136,15 @@
   background-color: var(--white);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px 0px;
+  box-shadow: 0 8px 32px rgba(81, 171, 79, 0.12);
   width: -webkit-fill-available;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card-service:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px 0px;
+  // border: 1px solid rgba(81, 171, 79, 0.1);
 }
 
 .service-icon {
