@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
 
 @Component({
@@ -9,9 +10,16 @@ import { filter } from 'rxjs';
 })
 export class HeaderComponent {
 
+  langList: any = [
+    { code: 1, name: "Thai", value: "th" },
+    { code: 2, name: "English", value: "en" },
+  ]
+
+  langLocal: string = "";
   isActiveMarginBTM: boolean = true;
   position: String = "inherit";
-  constructor(private router: Router, private route: ActivatedRoute) {
+selectedLang: any;
+  constructor(private router: Router, private route: ActivatedRoute, public translate: TranslateService) {
 
 
     this.router.events
@@ -30,6 +38,17 @@ export class HeaderComponent {
           console.log('Current path:', event.urlAfterRedirects);
         }
       });
+
+      this.langLocal = localStorage.getItem("lang") ?? "th"
+      localStorage.setItem("lang", this.langLocal)
+
+      // translate.addLangs(['th', 'en']);
+      translate.setDefaultLang(this.langLocal);
+      // translate.use('th');
+
+      // const browserLang = translate.getBrowserLang();
+      const browserLang = translate.getDefaultLang();
+      translate.use(browserLang && browserLang.match(/th|en/) ? browserLang : 'th');
   }
 
   scrollPosition: boolean = false;
@@ -60,5 +79,10 @@ export class HeaderComponent {
 
   ngOnInit(): void {
 
+  }
+
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
+    localStorage.setItem("lang", lang)
   }
 }

@@ -1,10 +1,33 @@
 <div class="main-product">
   <div class="div-title">
-    <span class="title">รายละเอียด</span>
+    <span class="title">ผลิตภัณฑ์และบริการ</span>
   </div>
   <div class="div-content">
     <span class="title">ผลิตภัณฑ์ของเรา</span>
-    <div class="row">
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="div-equipment">
+      <div class="equipment-bar col-3">
+        <div class="box-item" *ngFor="let i of equipmentList; let idx = index;">
+          <div class="item" [class.active]="isEquipmentSelect == i.code" (click)="viewDetail(i)">
+            {{i.title}}
+          </div>
+        </div>
+      </div>
+
+      <div class="row box-detail-equipment ">
+        <div class="col-12 col-lg-3">
+          <div class="div-img">
+            <img src="{{modelEquipment.imageUrl}}" alt="" class="img">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 div-des">
+          <span class="title">{{modelEquipment.title}}</span>
+          <span class="des">{{modelEquipment.description}}</span>
+        </div>
+      </div>
+    </div>
+    <!--  <div class="row">
       <div class="product col-12 col-md-6 col-lg-6 d-flex" *ngFor="let i of productList; let idx = index;">
         <div class="card-product">
           <div class="img-product">
@@ -20,7 +43,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="div-content">
@@ -88,7 +111,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service" >
+      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">

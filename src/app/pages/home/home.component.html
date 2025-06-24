@@ -26,18 +26,12 @@
               </div>
               <div class="col-12 col-md-6 text-tab d-flex flex-column">
                 <h2>
-                  We Tech Makers คือใคร?
+                  {{ 'whoWeTechMakers' | translate }}
                 </h2>
                 <div class="spacer"></div>
+                <!-- <div [innerHTML]="" class="c-article"></div> -->
                 <span class="c-article">
-                  เจ้าของเทคโนโลยีและผู้พัฒนาโปรแกรมควบคุมระบบเชื้อเพลิงผสมอย่างเต็มรูปแบบด้วย <b>ประสบการณ์กว่า
-                    20ปี</b>
-                  ในภาคขนส่ง อุตสาหกรรม และเครื่องผลิตไฟฟ้าทั่วโลก
-                  เราพัฒนาเทคโนโลยีที่สามารถทดแทนการใช้ดีเซลได้สูงสุดถึง
-                  80% และเป็นหนึ่งในไม่กี่รายของโลกที่แก้ปัญหาการชิงจุดระเบิด(pre-ignition) ได้สำเร็จ
-                  โดยระบบของเราใช้งานง่าย
-                  ดูแลสะดวก ด้วยกล่องควบคุมอัจฉริยะที่เราออกแบบมาเฉพาะสำหรับเชื้อเพลิงผสม ให้การเผาไหม้สมบูรณ์
-                  ลดต้นทุนการใช้งาน และบำรุงรักษาอีกทั้งยังผ่านการรับรองมาตรฐานระดับโลก
+                  {{ 'whoWeTechMakersArticle' | translate }}
                 </span>
               </div>
             </div>
@@ -49,27 +43,18 @@
     <div class="content-1" style="background-color: aliceblue;">
       <div class="div-content">
         <div class="row">
-          <div class="col-12 ">
+          <div class="col-12">
             <div class="card-who-we-tech">
-
               <div class="col-12 col-md-6 text-tab d-flex flex-column">
                 <h2>
-                  LNG คืออะไร?
+                  {{ 'WhatIsLng' | translate }}
                 </h2>
                 <div class="spacer"></div>
                 <span class="text-tab">
-                  LNG (Liquefied Natural Gas) หรือก๊าชธรรมชาติเหลว คือ ก๊าชธรรมชาติที่ถูกทำให้เย็นลงจนถึงอุณหภูมิประมาณ -160
-                  องศาเซลเซียส เพื่อเปลี่ยนสถานะจากก๊าชมาเป็นของเหลว
-                  โดยกระบวนการนี้ช่วยให้ ลดปริมาตรลงได้ถึงประมาณ 600 เท่า
-                  ทำให้การขนส่งและจัดเก็บมีความสะดวกและประหยัดพื้นที่มากยิ่งขึ้น
+                  {{ 'WhatIsLngArticle1' | translate }}
                 </span>
                 <span class="c-article text-tab">
-                  ในปัจจุบันเชื่อเพลิง LNG เป็นพลังงานที่ถูกนำมาใช้งานทั่วโลก
-                  ทั้งในประเทศที่ผลิตก๊าชธรรมชาติและประเทศที่ต้องนำเข้า
-                  อีกทั้งยังมีบทบาทสำคัญในการขับเคลื่อนเศรษฐกิจของหลายประเทศ
-                  ส่วนในประเทศไทยก๊าช LNG เริ่มเป็นที่สนใจและมีการใช้งานมากขึ้น ทั้งเป็นเชื้อเพลิงในการผลิตกระแสไฟฟ้า
-                  ใช้ในภาคอุตสาหกรรม และใช้เป็นเชื้อเพลิงสำหรับรถยนต์(LNG) ซึ่งส่วนใหญ่ไทยมีการนำเข้า LNG จากต่างประเทศ
-                  อาทิ เมียนมา กาตาร์ อินโดนีเซีย ออสเตรเลีย เป็นต้น เนื่องจาก LNG ที่ผลิตเองได้จากอ่าวไทยยังไม่เพียงพอ
+                  {{ 'WhatIsLngArticle2' | translate }}
                 </span>
               </div>
               <div class="col-12 col-md-6">
@@ -84,7 +69,7 @@
     </div>
 
     <div class="content-1">
-      <div class="div-content">
+      <!-- <div class="div-content">
         <h2>
           คุณสมบัติเด่นของ LNG
         </h2>
@@ -94,32 +79,28 @@
         <li>ด้วยคุณสมบัติที่เบากว่าอากาศจึงลอยขึ้นและแพร่กระจายในอากาศเมื่อเกิดการรั่วไหล</li>
         <li>ช่วยลดต้นทุนมากกว่าการใช้เชื้อเพลิงปิโตรเลียมอื่น ๆ เช่น น้ำมัน น้ำมันเตา</li>
 
-      </div>
-    </div>
+      </div> -->
 
-    <div class="content-2">
       <div class="div-content">
-        <div class="row div-title-why-lng">
-          <h2 class="c-white">
-            ทำไมต้อง LNG?
+        <div class="row div-title-why-lng card-who-we-tech">
+          <h2>
+            {{ 'WhyLng' | translate }}
           </h2>
           <img src="./../../../assets/img/car.png" alt="" class="icon-car">
         </div>
         <div class="spacer"></div>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
         <div class="d-flex why-lng-container">
           <div class="card">
-            แก้ปัญหา "มลพิษ" <br> เป็นมิตรต่อสิ่งแวดล้อม
+            {{ 'WhyLngCard1' | translate }}
           </div>
           <div class="card">
-            "ราคาถูก" กว่าดีเซล บรรเทาวิกฤติน้ำมันแพง!
+            {{ 'WhyLngCard2' | translate }}
           </div>
           <div class="card">
-            รถใช้ CNG <br> ครบอายุใช้งาน <br> ต้องถอดเปลี่ยนอุปกรณ์
+            {{ 'WhyLngCard3' | translate }}
           </div>
           <div class="card">
-            "ลดการสึกหรอ" <br> ของเครื่องยนต์, <br> อุณหภูมิห้องโดยสาร <br> เย็นขึ้น
+            {{ 'WhyLngCard4' | translate }}
           </div>
         </div>
       </div>
@@ -128,34 +109,66 @@
     <div class="content-1">
       <div class="div-content">
         <h2>
-          ประโยชน์ของ LNG พลังงานทางเลือกแห่งอนาคต
+          {{ 'benefitsOfLng' | translate }}
         </h2>
         <div class="spacer"></div>
-        <span class="c-article text-tab">LNG มีบทบาทสำคัญในหลายอุตสาหกรรม ซึ่งปัจจุบันประเทศไทยมีการใช้ประโยชน์จาก LNG
-          ทั้งการผลิตกระแสไฟฟ้่า
-          ใช้ในภาคอุตสาหกรรม เช่น การผลิตเหล็ก การผลิตปุ๋ย และยังถูกใช้เป็นเชื้อเพลิงสำหรับยานพาหนะ
-          เช่น รถบรรทุกในภาคการขนส่ง ที่ใช้ในเชื้อเพลิงดีเซล หรือติดแก๊ส CNG อยู๋แล้ว สามารถเปลี่ยนมาใช้เป็น LNG ได้
-          ซึ่งตอบโจทย์มากกว่าทั้งในแง่ของค่าใช้จ่ายที่ลดลงเนื่องจากราคา LNG ถูกเชื้อเพลิงประเภทอื่น
-          อีกทั้งการเติมแต่ละรอบใช้เวลาไม่นานประมาณ 10-15 นาที และสามารถวิ่งได้ระยะทางไกลถึง 1,000-1,400 กม.
-          จึงช่วยประหยัดเวลาได้มากขึ้น เป็นต้น
+        <span class="c-article text-tab">
+          {{ 'benefitsOfLngArticle1' | translate }}
         </span>
         <span class="c-article text-tab">
-          ข้อดีของ LNG คือ เป็น "พลังงานสะอาด" มีประสิทธิภาพสูง ทำให้เครื่องยนต์เกิดการเผาใหม้ที่สมบูรณ์
-          เป็นมิตรต่อสิ่งแวดล้อม สามารถใช้แทนน้ำมันดีเซล หรือก๊าช CNGได้ และปลอดภันกว่า เพราะหากเกิดการรั่วไหล LNG
-          ซึ่งเบากว่าอากาศจะระเหยเป็นไอและลอยขึ้นสู่ชั้นบรรยากาศอย่างรวดเร็ว โดยไม่เหลือการตกค้างใด ๆในน้ำหรือดิน
-          ส่วนการติดไฟหรือโอกาาสในการลุกไหม้จะเกิดขึ้นได้เฉพาะกรณีที่ LNG อยู่ในสถานะก๊าช มีระดับความเข้มข้นในอากาศ
-          5-15%
-          สภาพแวดล้อมปิด และมีประกายไฟเกิดขึ้นในบริเวณใกล้เคียง เป็นต้น
+          {{ 'benefitsOfLngArticle2' | translate }}
         </span>
+      </div>
+    </div>
+
+    <div class="content-2">
+      <div class="div-content">
+        <div class="row div-title-why-lng">
+          <h2 class="c-white">
+            {{ 'WhatDdf' | translate }}
+          </h2>
+        </div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="d-flex why-lng-container">
+          <span class="c-article text-tab c-white">
+            {{ 'WhatDdfArticle1' | translate }}
+          </span>
+        </div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+
+
+        <div class="card-who-we-tech">
+          <div class="col-12 col-md-6">
+            <div class="div-img-what-lng">
+              <img src="./../../../assets/img/ddf-mock.png" alt="">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 class="c-white">
+              {{ 'advantagesOfDdf' | translate }}
+            </h2>
+            <div class="spacer"></div>
+            <li class="check c-white">{{ 'advantagesOfDdf1' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf2' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf3' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf4' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf5' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf6' | translate }}</li>
+            <li class="check c-white">{{ 'advantagesOfDdf7' | translate }}</li>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div class="content-1 service-bg">
       <div class="div-content box" [class.animate]="isVisible" #animatedBox>
         <h2 class="c-white">
-          ผลิตภัณฑ์ และบริการ
+          {{ 'productAndService' | translate }}
         </h2>
-        <span class="c-white">บริการครบ จบที่เดียว One Stop Service</span>
+        <span class="c-white">{{ 'productAndServiceSubtitle' | translate }}</span>
         <div class="spacer"></div>
         <div class="spacer"></div>
         <div class="spacer"></div>
@@ -163,21 +176,41 @@
           <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
             <div class="card-service">
               <div class="service-head">
-                <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
+                <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
                 <span class="service-title">
-                  ติดตั้ง
+                  {{ 'proAndSerTitle1' | translate }}
                 </span>
               </div>
               <span class="service-text">
-                บริการรับติดแก๊ส LNG รถบรรทุก
+                {{ 'proAndSerDes1' | translate }}
               </span>
             </div>
 
-            <div class="service-arrow">
+            <!-- <div class="service-arrow">
               <button class="goto">
                 <i class="material-icons icon-btn-sevice">arrow_forward</i>
               </button>
+            </div> -->
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
+                <span class="service-title">
+                  {{ 'proAndSerTitle2' | translate }}
+                </span>
+              </div>
+              <span class="service-text">
+                {{ 'proAndSerDes2' | translate }}
+              </span>
             </div>
+
+            <!-- <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div> -->
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
@@ -185,19 +218,19 @@
               <div class="service-head">
                 <img src="./../../../assets/icons/icon-maintain.png" alt="" class="service-icon">
                 <span class="service-title">
-                  ตรวจสภาพ
+                  {{ 'proAndSerTitle3' | translate }}
                 </span>
               </div>
               <span class="service-text">
-                บริการรับตรวจเช็คสภาพ และซ่อมบำรุงระบบ
+                {{ 'proAndSerDes3' | translate }}
               </span>
             </div>
 
-            <div class="service-arrow">
+            <!-- <div class="service-arrow">
               <button class="goto">
                 <i class="material-icons icon-btn-sevice">arrow_forward</i>
               </button>
-            </div>
+            </div> -->
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
@@ -205,59 +238,19 @@
               <div class="service-head">
                 <img src="./../../../assets/icons/icon-recomance.png" alt="" class="service-icon">
                 <span class="service-title">
-                  จดทะเบียน
+                  {{ 'proAndSerTitle4' | translate }}
                 </span>
               </div>
               <span class="service-text">
-                บริการแนะนำการจดทะเบียน สำหรับรถใช้ก๊าช LNG
+                {{ 'proAndSerDes4' | translate }}
               </span>
             </div>
 
-            <div class="service-arrow">
+            <!-- <div class="service-arrow">
               <button class="goto">
                 <i class="material-icons icon-btn-sevice">arrow_forward</i>
               </button>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
-            <div class="card-service">
-              <div class="service-head">
-                <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
-                <span class="service-title">
-                  จัดจำหน่าย
-                </span>
-              </div>
-              <span class="service-text">
-                บริการจัดจำหน่ายชุดอุปกรณ์ถังก๊าช ชิ้นส่วน และอะไหล่ต่างๆ
-              </span>
-            </div>
-
-            <div class="service-arrow">
-              <button class="goto">
-                <i class="material-icons icon-btn-sevice">arrow_forward</i>
-              </button>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
-            <div class="card-service">
-              <div class="service-head">
-                <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">
-                <span class="service-title">
-                  สินเชื่อ
-                </span>
-              </div>
-              <span class="service-text">
-                บริการให้คำปรึกษาด้านสินเชื่อสำหรับการติดตั้งแก๊ส
-              </span>
-            </div>
-
-            <div class="service-arrow">
-              <button class="goto">
-                <i class="material-icons icon-btn-sevice">arrow_forward</i>
-              </button>
-            </div>
+            </div> -->
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
@@ -265,19 +258,41 @@
               <div class="service-head">
                 <img src="./../../../assets/icons/icon-course.png" alt="" class="service-icon">
                 <span class="service-title">
+                  {{ 'proAndSerTitle5' | translate }}
                   อบรม
                 </span>
               </div>
               <span class="service-text">
+                {{ 'proAndSerDes5' | translate }}
                 บริการคอร์สฝึกอบรมเกี่ยวกับ LNG
               </span>
             </div>
 
-            <div class="service-arrow">
+            <!-- <div class="service-arrow">
               <button class="goto">
                 <i class="material-icons icon-btn-sevice">arrow_forward</i>
               </button>
+            </div> -->
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+            <div class="card-service">
+              <div class="service-head">
+                <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">
+                <span class="service-title">
+                  {{ 'proAndSerTitle6' | translate }}
+                </span>
+              </div>
+              <span class="service-text">
+                {{ 'proAndSerDes6' | translate }}
+              </span>
             </div>
+
+            <!-- <div class="service-arrow">
+              <button class="goto">
+                <i class="material-icons icon-btn-sevice">arrow_forward</i>
+              </button>
+            </div> -->
           </div>
 
         </div>
@@ -288,7 +303,7 @@
     <div class="content-1">
       <div class="div-content">
         <h2 (click)="gotoNewsPage()">
-          ข่าวสารและกิจกรรม
+          {{ 'newsAndEvent' | translate }}
         </h2>
         <div class="spacer"></div>
         <div class="spacer"></div>
@@ -301,15 +316,16 @@
                 <div class="div-img-news">
                   <img src="{{i.imageUrl}}" alt="" class="news-img">
                 </div>
-                <span class="news-title hidden-title">
+                <span class="news-title hidden-title" *ngIf="translate.currentLang === 'th'">
                   {{i.title}}
                 </span>
-                <div [innerHTML]="i.description" class="news-text hidden-des"></div>
-                <!-- <span class="news-text">
-                  {{i.description}}
-                </span> -->
+                <span class="news-title hidden-title" *ngIf="translate.currentLang === 'en'">
+                  {{i.titleEN}}
+                </span>
+                <div [innerHTML]="i.description" class="news-text hidden-des" *ngIf="translate.currentLang === 'th'"></div>
+                <div [innerHTML]="i.descriptionEN" class="news-text hidden-des" *ngIf="translate.currentLang === 'en'"></div>
               </div>
-              <button class="read-news">อ่านเพิ่มเติม <i class="material-icons">arrow_forward</i></button>
+              <button class="read-news">{{ 'readMore' | translate }} <i class="material-icons">arrow_forward</i></button>
             </div>
           </div>
 
@@ -323,7 +339,5 @@
 
 
   </div>
-
 </div>
 
-<app-go-to-top></app-go-to-top>

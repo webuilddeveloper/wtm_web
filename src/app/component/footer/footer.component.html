@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-3 div-menu-footer">
         <span class="title">
-          บริการของเรา
+          {{ 'ourServices' | translate }}
         </span>
         <div class="sub-menu">
           <span class="menu">
@@ -23,33 +23,43 @@
       <div class="col-3 div-menu-footer">
         <div class="sub-menu">
           <a class="title">
-            หน้าแรก
+            {{ 'home' | translate }}
           </a>
           <a class="title">
-            ข่าวสารและกิจกรรม
+            {{ 'newsAndEvent' | translate }}
           </a>
           <a class="title">
-            ผลิตภัณฑ์และบริการ
+            {{ 'productAndService' | translate }}
           </a>
           <a class="title">
-            เกี่ยวกับเรา
+            {{ 'aboutMe' | translate }}
           </a>
           <a class="title">
-            ติดต่อเรา
+            {{ 'contactUs' | translate }}
           </a>
         </div>
       </div>
       <div class="col-3 div-menu-footer">
         <span class="title">
-          ติดต่อเรา
+          {{ 'contactUs' | translate }}
         </span>
         <div class="sub-menu">
-          <span class="menu">
-            52/1 ซอยลาดพร้าว 83 (จิตต์อารีย์) ถนนลาดพร้าว แขวงวังทองหลาง เขตวังทองหลาง กรุงเทพมหานคร 10310
+          <span class="menu" *ngIf="translate.currentLang === 'th'">
+            {{aboutMeModel.title}}
+          </span>
+          <span class="menu" *ngIf="translate.currentLang === 'en'">
+            {{aboutMeModel.titleEN}}
+          </span>
+          <br>
+          <span class="menu" *ngIf="translate.currentLang === 'th'">
+            {{aboutMeModel.address}}
+          </span>
+          <span class="menu" *ngIf="translate.currentLang === 'en'">
+            {{aboutMeModel.addressEN}}
           </span>
           <br>
           <span class="menu">
-            tel: 020000000
+            {{ 'tel' | translate }}: {{aboutMeModel.telephone}}
           </span>
         </div>
       </div>

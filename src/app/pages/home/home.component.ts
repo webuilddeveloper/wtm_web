@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
@@ -78,7 +79,10 @@ export class HomeComponent {
     private route: ActivatedRoute,
     private serviceProvider: ServiceProvider,
     private router: Router,
-  ) {}
+    public translate: TranslateService
+  ) {
+
+  }
 
   @ViewChild('animatedBox') box!: ElementRef;
   isVisible = false;
