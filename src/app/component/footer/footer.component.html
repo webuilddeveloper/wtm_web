@@ -50,14 +50,17 @@
           <span class="menu" *ngIf="translate.currentLang === 'en'">
             {{aboutMeModel.titleEN}}
           </span>
-          <br>
+          <div class="spacer"></div>
           <span class="menu" *ngIf="translate.currentLang === 'th'">
             {{aboutMeModel.address}}
           </span>
           <span class="menu" *ngIf="translate.currentLang === 'en'">
             {{aboutMeModel.addressEN}}
           </span>
-          <br>
+          <div class="spacer"></div>
+          <span class="menu">
+            {{ 'email' | translate }}: {{aboutMeModel.email}}
+          </span>
           <span class="menu">
             {{ 'tel' | translate }}: {{aboutMeModel.telephone}}
           </span>

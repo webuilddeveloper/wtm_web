@@ -1,8 +1,7 @@
 <!-- <app-header></app-header> -->
 <div class="vertical ">
   <div class="aboutUs ">
-    <h3>เกี่ยวกับเรา</h3>
-
+    <h3>{{ 'aboutMe' | translate }}</h3>
   </div>
 
 
@@ -10,9 +9,8 @@
 
     <div class="vertical-line "></div>
     <div class="text-content ">
-      <h2>
-        We Tech Makers Co., Ltd.
-      </h2>
+      <h2 *ngIf="translate.currentLang === 'th'">{{aboutMeModel.title}}</h2>
+      <h2 *ngIf="translate.currentLang === 'en'">{{aboutMeModel.titleEN}}</h2>
       <div class="spacer"></div>
       <span>
         จดทะเบียนก่อตั้งเมื่อวันที่ 4 มิถุนายน 2568 ด้วยทุนจดทะเบียน 1 ล้านบาท
@@ -31,10 +29,9 @@
   <div class="text-content">
     <div class="spacer"></div>
     <h3>
-      วิสัยทัศน์ (Vision)
+      {{ 'vision' | translate }}
     </h3>
     <div class="spacer"></div>
-
     <span>
       มุ่งมั่นเป็นผู้นำในการให้บริการระบบพลังงานสะอาดและเทคโนโลยีก๊าซธรรมชาติเหลว (LNG) ที่ได้มาตรฐานระดับสากล
       เพื่อสนับสนุนอุตสาหกรรมไทยให้เติบโตอย่างยั่งยืน
@@ -44,7 +41,7 @@
 
   <div class="text-content">
     <h3>
-      พันธกิจ (Mission)
+      {{ 'mission' | translate }}
     </h3>
     <div class="spacer"></div>
     <li>ให้บริการติดตั้งระบบก๊าซธรรมชาติเหลว (LNG) ที่ปลอดภัย ทันสมัย และมีประสิทธิภาพ</li>
@@ -58,7 +55,7 @@
 
   <div class="vertical-line-wrapper">
     <div class="vertical-line "></div>
-    <h3>ผู้บริหาร</h3>
+    <h3>{{ 'executive' | translate }}</h3>
   </div>
 
   <div class="manager-grid-container">
@@ -70,6 +67,20 @@
   </div>
 
   <div class="spacer"></div>
+
+  <div class="text-content">
+    <div class="spacer"></div>
+    <h3>
+      {{ 'certificate' | translate }}
+    </h3>
+    <li>ใบประกาศ 1</li>
+    <li>ใบประกาศ 2</li>
+    <li>ใบประกาศ 3</li>
+    <li>ใบประกาศ 4</li>
+  </div>
+
+
+  <!-- <div class="spacer"></div>
   <div class="vertical-line-wrapper">
     <div class="text-content ">
       <h3>
@@ -89,7 +100,7 @@
 
   </div>
   <img class="fixedimg" src="assets/img/about-1.png">
-  <div class="spacer"></div>
+  <div class="spacer"></div> -->
 
 
 </div>

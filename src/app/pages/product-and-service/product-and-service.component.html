@@ -1,9 +1,9 @@
 <div class="main-product">
   <div class="div-title">
-    <span class="title">ผลิตภัณฑ์และบริการ</span>
+    <span class="title">{{ 'productAndService' | translate }}</span>
   </div>
   <div class="div-content">
-    <span class="title">ผลิตภัณฑ์ของเรา</span>
+    <span class="title">{{ 'ourProducts' | translate }}</span>
     <div class="spacer"></div>
     <div class="spacer"></div>
     <div class="div-equipment">
@@ -47,20 +47,40 @@
   </div>
 
   <div class="div-content">
-    <span class="title">บริการของเรา</span>
+    <span class="title">{{ 'ourServices' | translate }}</span>
     <div class="spacer"></div>
     <div class="spacer"></div>
     <div class="row div-group-service">
       <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
-            <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
+            <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
             <span class="service-title">
-              ติดตั้ง
+              {{ 'proAndSerTitle1' | translate }}
             </span>
           </div>
           <span class="service-text">
-            บริการรับติดแก๊ส LNG รถบรรทุก
+            {{ 'proAndSerDes1' | translate }}
+          </span>
+        </div>
+
+        <!-- <div class="service-arrow">
+          <button class="goto">
+            <i class="material-icons icon-btn-sevice">arrow_forward</i>
+          </button>
+        </div> -->
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+        <div class="card-service">
+          <div class="service-head">
+            <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
+            <span class="service-title">
+              {{ 'proAndSerTitle2' | translate }}
+            </span>
+          </div>
+          <span class="service-text">
+            {{ 'proAndSerDes2' | translate }}
           </span>
         </div>
 
@@ -76,11 +96,11 @@
           <div class="service-head">
             <img src="./../../../assets/icons/icon-maintain.png" alt="" class="service-icon">
             <span class="service-title">
-              ตรวจสภาพ
+              {{ 'proAndSerTitle3' | translate }}
             </span>
           </div>
           <span class="service-text">
-            บริการรับตรวจเช็คสภาพ และซ่อมบำรุงระบบ
+            {{ 'proAndSerDes3' | translate }}
           </span>
         </div>
 
@@ -96,51 +116,11 @@
           <div class="service-head">
             <img src="./../../../assets/icons/icon-recomance.png" alt="" class="service-icon">
             <span class="service-title">
-              จดทะเบียน
+              {{ 'proAndSerTitle4' | translate }}
             </span>
           </div>
           <span class="service-text">
-            บริการแนะนำการจดทะเบียน สำหรับรถใช้ก๊าช LNG
-          </span>
-        </div>
-
-        <!-- <div class="service-arrow">
-          <button class="goto">
-            <i class="material-icons icon-btn-sevice">arrow_forward</i>
-          </button>
-        </div> -->
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
-        <div class="card-service">
-          <div class="service-head">
-            <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
-            <span class="service-title">
-              จัดจำหน่าย
-            </span>
-          </div>
-          <span class="service-text">
-            บริการจัดจำหน่ายชุดอุปกรณ์ถังก๊าช ชิ้นส่วน และอะไหล่ต่างๆ
-          </span>
-        </div>
-
-        <!-- <div class="service-arrow">
-          <button class="goto">
-            <i class="material-icons icon-btn-sevice">arrow_forward</i>
-          </button>
-        </div> -->
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
-        <div class="card-service">
-          <div class="service-head">
-            <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">
-            <span class="service-title">
-              สินเชื่อ
-            </span>
-          </div>
-          <span class="service-text">
-            บริการให้คำปรึกษาด้านสินเชื่อสำหรับการติดตั้งแก๊ส
+            {{ 'proAndSerDes4' | translate }}
           </span>
         </div>
 
@@ -156,11 +136,31 @@
           <div class="service-head">
             <img src="./../../../assets/icons/icon-course.png" alt="" class="service-icon">
             <span class="service-title">
-              อบรม
+              {{ 'proAndSerTitle5' | translate }}
             </span>
           </div>
           <span class="service-text">
-            บริการคอร์สฝึกอบรมเกี่ยวกับ LNG
+            {{ 'proAndSerDes5' | translate }}
+          </span>
+        </div>
+
+        <!-- <div class="service-arrow">
+          <button class="goto">
+            <i class="material-icons icon-btn-sevice">arrow_forward</i>
+          </button>
+        </div> -->
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+        <div class="card-service">
+          <div class="service-head">
+            <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">
+            <span class="service-title">
+              {{ 'proAndSerTitle6' | translate }}
+            </span>
+          </div>
+          <span class="service-text">
+            {{ 'proAndSerDes6' | translate }}
           </span>
         </div>
 
@@ -175,7 +175,7 @@
   </div>
 
   <div class="div-content">
-    <span class="title">ผลงงานจากเรา</span>
+    <span class="title">{{ 'ourWork' | translate }}</span>
     <div class="row">
       <div class="product col-12 col-md-6 col-lg-6 d-flex" *ngFor="let i of performanceList; let idx = index;">
         <div class="card-performance">
@@ -183,10 +183,11 @@
             <img src="{{i.imageUrl}}" alt="">
           </div>
           <div class="description">
-            <span class="title">{{i.title}}</span>
+            <span class="title" *ngIf="translate.currentLang === 'th'">{{i.title}}</span>
+            <span class="title" *ngIf="translate.currentLang === 'en'">{{i.titleEN}}</span>
             <div class="spacer"></div>
             <button class="btn-bottom" (click)="gotoPerformanceDetails(i.code)">
-              <span>ดูเพิ่มเติม </span>
+              <span>{{ 'viewMore' | translate }} </span>
               <i class="material-icons">arrow_forward</i>
             </button>
           </div>

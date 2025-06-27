@@ -1,9 +1,9 @@
-<div class="bg-circle"></div>
+<!-- <div class="bg-circle"></div> -->
 
 <div class="vertical">
     <div class="news-section">
         <div class="section-header">
-            <h3>ข่าวสารกิจกรรม</h3>
+            <h3>{{ 'newsAndEvent' | translate }}</h3>
         </div>
 
         <div class="news-container">
@@ -13,8 +13,10 @@
                     <div class="image-overlay"></div>
                 </div>
                 <div class="card-content">
-                    <h4 class="news-title">{{ item.title }}</h4>
-                    <div class="news-description" [innerHTML]="item.description"></div>
+                    <h4 class="news-title" *ngIf="translate.currentLang === 'th'">{{ item.title }}</h4>
+                    <h4 class="news-title" *ngIf="translate.currentLang === 'en'">{{ item.titleEN }}</h4>
+                    <div class="news-description" [innerHTML]="item.description" *ngIf="translate.currentLang === 'th'"></div>
+                    <div class="news-description" [innerHTML]="item.descriptionEN" *ngIf="translate.currentLang === 'en'"></div>
                 </div>
             </div>
         </div>

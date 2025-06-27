@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class ProductAndServiceComponent {
 
   isEquipmentSelect: string = "0";
   modelEquipment: any = {};
-  constructor(private router: Router, private serviceProvider: ServiceProvider) {}
+  constructor(private router: Router, private serviceProvider: ServiceProvider, public translate: TranslateService) {}
   performanceList: any = [];
   equipmentList: any = [
     {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
@@ -7,11 +8,13 @@ import { ServiceProvider } from 'src/app/shared/service-provider.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  constructor(private serviceProvider: ServiceProvider) {}
+  constructor(private serviceProvider: ServiceProvider, public translate: TranslateService) {}
   listEmployee: any = [];
+  aboutMeModel: any = {};
 
   ngOnInit(): void {
     this.callRead();
+    this.readAboutMe();
   }
 
   callRead() {
@@ -21,6 +24,16 @@ export class AboutComponent implements OnInit {
         let model: any = {};
         model = data;
         this.listEmployee = model.objectData;
+      });
+  }
+
+  readAboutMe() {
+    this.serviceProvider
+      .post('aboutUs/read', {})
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        this.aboutMeModel = model.objectData[0];
       });
   }
 }

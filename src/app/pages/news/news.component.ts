@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 
@@ -9,11 +10,11 @@ import { ServiceProvider } from 'src/app/shared/service-provider.service';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-  
+
   newsList: any[] = [];
 
-  constructor(private serviceProvider: ServiceProvider) { } 
-  
+  constructor(private serviceProvider: ServiceProvider, public translate: TranslateService) { }
+
 
   ngOnInit(): void {
     const url = 'm/news/read';

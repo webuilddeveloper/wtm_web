@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ServiceProvider } from 'src/app/shared/service-provider.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class PerformanceDetailsComponent {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private serviceProvider: ServiceProvider) {
+    private serviceProvider: ServiceProvider,
+    public translate: TranslateService) {
 
   }
   ngOnInit(): void {
