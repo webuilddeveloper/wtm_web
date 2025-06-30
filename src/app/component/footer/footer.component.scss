@@ -68,3 +68,17 @@ a {
   flex-direction: column;
   align-items: flex-end;
 }
+
+@media (max-width: 768px) {
+  .main-filter {
+    padding: 30px;
+  }
+
+  .div-menu-footer {
+    --bs-gutter-y: 1.5rem;
+  }
+
+  .div-logo {
+    align-items: center;
+  }
+}

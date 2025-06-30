@@ -1,7 +1,7 @@
 <div class="footer">
   <div class="main-filter">
     <div class="row">
-      <div class="col-3 div-menu-footer">
+      <!-- <div class="col-12 col-md-6 col-lg-3 div-menu-footer">
         <span class="title">
           {{ 'ourServices' | translate }}
         </span>
@@ -19,8 +19,8 @@
             footer works!
           </span>
         </div>
-      </div>
-      <div class="col-3 div-menu-footer">
+      </div> -->
+      <div class="col-12 col-md-6 col-lg-4 div-menu-footer">
         <div class="sub-menu">
           <a class="title">
             {{ 'home' | translate }}
@@ -39,10 +39,10 @@
           </a>
         </div>
       </div>
-      <div class="col-3 div-menu-footer">
-        <span class="title">
+      <div class="col-12 col-md-6 col-lg-4 div-menu-footer">
+        <!-- <span class="title">
           {{ 'contactUs' | translate }}
-        </span>
+        </span> -->
         <div class="sub-menu">
           <span class="menu" *ngIf="translate.currentLang === 'th'">
             {{aboutMeModel.title}}
@@ -50,14 +50,14 @@
           <span class="menu" *ngIf="translate.currentLang === 'en'">
             {{aboutMeModel.titleEN}}
           </span>
-          <div class="spacer"></div>
+          <div class="spacer d-none d-lg-block"></div>
           <span class="menu" *ngIf="translate.currentLang === 'th'">
             {{aboutMeModel.address}}
           </span>
           <span class="menu" *ngIf="translate.currentLang === 'en'">
             {{aboutMeModel.addressEN}}
           </span>
-          <div class="spacer"></div>
+          <div class="spacer d-none d-lg-block"></div>
           <span class="menu">
             {{ 'email' | translate }}: {{aboutMeModel.email}}
           </span>
@@ -66,7 +66,7 @@
           </span>
         </div>
       </div>
-      <div class="col-3 div-menu-footer justify-content-end">
+      <div class="col-12 col-md-6 col-lg-4 div-menu-footer justify-content-end">
         <div class="div-logo">
           <img src="./assets/img/logoMain.png" alt="" class="logo-footer">
           <span class="text-logo">we tech makers</span>
