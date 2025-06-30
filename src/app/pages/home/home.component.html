@@ -3,12 +3,14 @@
 
   <div class="bg">
     <div class="content-main">
-      <div class="div-top">
-        <div class="left">
-          <img src="./../../../assets/img/logoMain.png" alt="" class="logo">
+      <div class="row w-full bs-x0">
+        <div class="left d-flex col-12 col-md-6 justify-content-center">
+          <div class="div-img-logo-main">
+            <img src="./../../../assets/img/logoMain.png" alt="" class="img-logo-main">
+          </div>
           <span class="title">We Tech Makers</span>
         </div>
-        <div class="right">เนื้อหาฝั่งขวา (ยังคิดไม่ออก)</div>
+        <div class="right col-12 col-md-6">เนื้อหาฝั่งขวา (ยังคิดไม่ออก)</div>
       </div>
     </div>
   </div>
@@ -16,9 +18,9 @@
 
     <div class="content-1">
       <div class="div-content">
-        <div class="row">
+        <div class="row bs-x0">
           <div class="col-12 ">
-            <div class="card-who-we-tech">
+            <div class="card-who-we-tech row bs-x0">
               <div class="col-12 col-md-6">
                 <div class="div-img">
                   <img src="./../../../assets/img/logoMain.png" alt="">
@@ -42,9 +44,9 @@
 
     <div class="content-1" style="background-color: aliceblue;">
       <div class="div-content">
-        <div class="row">
+        <div class="row bs-x0">
           <div class="col-12">
-            <div class="card-who-we-tech">
+            <div class="card-who-we-tech row bs-x0">
               <div class="col-12 col-md-6 text-tab d-flex flex-column">
                 <h2>
                   {{ 'WhatIsLng' | translate }}
@@ -53,11 +55,20 @@
                 <span class="text-tab">
                   {{ 'WhatIsLngArticle1' | translate }}
                 </span>
+                <div class="spacer d-block d-lg-none"></div>
+                <div class="spacer d-block d-lg-none"></div>
+                <div class="col-12 col-md-6 d-block d-lg-none">
+                  <div class="div-img-what-lng">
+                    <img src="./../../../assets/img/lng-mock-2.png" alt="">
+                  </div>
+                </div>
+                <div class="spacer d-block d-lg-none"></div>
+                <div class="spacer d-block d-lg-none"></div>
                 <span class="c-article text-tab">
                   {{ 'WhatIsLngArticle2' | translate }}
                 </span>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6 d-none d-lg-block">
                 <div class="div-img-what-lng">
                   <img src="./../../../assets/img/lng-mock-2.png" alt="">
                 </div>
@@ -81,28 +92,39 @@
 
       </div> -->
 
-      <div class="div-content">
+      <div class="div-content ovf-hide">
         <div class="row div-title-why-lng card-who-we-tech">
           <h2>
             {{ 'WhyLng' | translate }}
           </h2>
-          <img src="./../../../assets/img/car.png" alt="" class="icon-car">
+          <img src="./../../../assets/img/car.png" alt="" class="icon-car d-none d-lg-block">
         </div>
         <div class="spacer"></div>
-        <div class="d-flex why-lng-container">
-          <div class="card">
-            {{ 'WhyLngCard1' | translate }}
+        <div class="spacer d-block d-lg-none"></div>
+        <div class="spacer d-block d-lg-none"></div>
+        <div class="d-flex why-lng-container row gy-3">
+          <div class="d-flex col-12 col-md-6 col-lg-3">
+            <div class="card-why-lng">
+              {{ 'WhyLngCard1' | translate }}
+            </div>
           </div>
-          <div class="card">
-            {{ 'WhyLngCard2' | translate }}
+          <div class="d-flex col-12 col-md-6 col-lg-3">
+            <div class="card-why-lng">
+              {{ 'WhyLngCard2' | translate }}
+            </div>
           </div>
-          <div class="card">
-            {{ 'WhyLngCard3' | translate }}
+          <div class="d-flex col-12 col-md-6 col-lg-3">
+            <div class="card-why-lng">
+              {{ 'WhyLngCard3' | translate }}
+            </div>
           </div>
-          <div class="card">
-            {{ 'WhyLngCard4' | translate }}
+          <div class="d-flex col-12 col-md-6 col-lg-3">
+            <div class="card-why-lng">
+              {{ 'WhyLngCard4' | translate }}
+            </div>
           </div>
         </div>
+        <img src="./../../../assets/img/car.png" alt="" class="icon-car d-block d-lg-none">
       </div>
     </div>
 
@@ -139,12 +161,14 @@
         <div class="spacer"></div>
 
 
-        <div class="card-who-we-tech">
+        <div class="card-who-we-tech row bs-x0">
           <div class="col-12 col-md-6">
             <div class="div-img-what-lng">
               <img src="./../../../assets/img/ddf-mock.png" alt="">
             </div>
           </div>
+          <div class="spacer d-block d-lg-none"></div>
+          <div class="spacer d-block d-lg-none"></div>
           <div class="col-12 col-md-6">
             <h2 class="c-white">
               {{ 'advantagesOfDdf' | translate }}
@@ -170,8 +194,8 @@
         </h2>
         <span class="c-white">{{ 'productAndServiceSubtitle' | translate }}</span>
         <div class="spacer"></div>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
+        <div class="spacer d-none d-lg-block"></div>
+        <div class="spacer d-none d-lg-block"></div>
         <div class="d-flex row div-group-service">
           <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
             <div class="card-service">
@@ -304,8 +328,8 @@
           {{ 'newsAndEvent' | translate }}
         </h2>
         <div class="spacer"></div>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
+        <div class="spacer d-none d-lg-block"></div>
+        <div class="spacer d-none d-lg-block"></div>
         <div class="d-flex row">
           <div class="col-12 col-md-6 col-lg-4 d-flex" style="position:relative"
             *ngFor="let i of newsList.slice(0,3); let idx = index;">
@@ -320,10 +344,13 @@
                 <span class="news-title hidden-title" *ngIf="translate.currentLang === 'en'">
                   {{i.titleEN}}
                 </span>
-                <div [innerHTML]="i.description" class="news-text hidden-des" *ngIf="translate.currentLang === 'th'"></div>
-                <div [innerHTML]="i.descriptionEN" class="news-text hidden-des" *ngIf="translate.currentLang === 'en'"></div>
+                <div [innerHTML]="i.description" class="news-text hidden-des" *ngIf="translate.currentLang === 'th'">
+                </div>
+                <div [innerHTML]="i.descriptionEN" class="news-text hidden-des" *ngIf="translate.currentLang === 'en'">
+                </div>
               </div>
-              <button class="read-news">{{ 'readMore' | translate }} <i class="material-icons">arrow_forward</i></button>
+              <button class="read-news">{{ 'readMore' | translate }} <i
+                  class="material-icons">arrow_forward</i></button>
             </div>
           </div>
 
@@ -338,4 +365,3 @@
 
   </div>
 </div>
-

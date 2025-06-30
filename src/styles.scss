@@ -39,11 +39,20 @@
   --font-family-poppins: "Poppins", Helvetica;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, 'Prompt', sans-serif; }
+html,
+body {
+  height: 100%;
+}
 
-html, body {
-  overflow: visible; /* ✅ */
+body {
+  margin: 0;
+  font-family: Roboto, 'Prompt', sans-serif;
+}
+
+html,
+body {
+  overflow: visible;
+  /* ✅ */
 }
 
 .bg-article {
@@ -62,7 +71,7 @@ h2 {
 .c-article {
   color: var(--article-text);
   font-weight: 200;
-  text-align:justify;
+  text-align: justify;
   display: inline-block;
   max-width: -webkit-fill-available;
   word-break: break-word;
@@ -76,7 +85,7 @@ h2 {
   text-indent: 4em;
 }
 
-.text-tab h2{
+.text-tab h2 {
   text-indent: 0em;
 }
 
@@ -86,4 +95,22 @@ h2 {
 
 .c-white {
   color: var(--white);
+}
+
+.w-full {
+  width: -webkit-fill-available;
+}
+
+.bs-x0 {
+  --bs-gutter-x: 0;
+}
+
+.ovf-hide {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .text-tab {
+    text-indent: 2em;
+  }
 }

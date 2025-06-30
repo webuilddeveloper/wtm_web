@@ -1,4 +1,4 @@
-<div class="div-header" [ngStyle]="{'position': scrollPosition ? 'fixed' : position}">
+<div class="div-header d-none d-lg-block" [ngStyle]="{'position': scrollPosition ? 'fixed' : position}">
   <div class="header">
     <div class="content-header">
       <img src="./assets/img/logoMain.png" alt="" class="logo-header">
@@ -16,4 +16,14 @@
   </div>
   <!-- <div class="scroll-watcher"></div> -->
 </div>
+
+<!-- <div class="div-header d-block d-lg-none" [ngStyle]="{'position': scrollPosition ? 'fixed' : position}">
+  <div class="header">
+    <div class="content-header">
+      <img src="./assets/img/logoMain.png" alt="" class="logo-header">
+
+    </div>
+  </div>
+
+</div> -->
 <div *ngIf="isActiveMarginBTM" [ngStyle]="{'margin-bottom': scrollPosition ? '112px' : '0'}">&nbsp;</div>

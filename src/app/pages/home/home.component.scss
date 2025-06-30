@@ -57,7 +57,6 @@
 }
 
 .div-top .left {
-  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,9 +64,7 @@
 
 }
 
-.div-top .right {
-  width: 60%;
-}
+.div-top .right {}
 
 .div-top .logo {
   max-width: 15rem;
@@ -117,18 +114,22 @@
 .why-lng-container {
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  position: relative;
+  z-index: 999999;
+  // gap: 30px;
 }
 
-.why-lng-container .card {
+.why-lng-container .card-why-lng {
   padding: 20px;
   font-size: var(--font-24);
   color: var(--black);
-  width: 25%;
+  // width: 25%;
   border-radius: 20px;
   text-align: center;
   box-shadow: -1px 6px 32px 0px rgb(81 171 79 / 20%);
   border: 1px solid rgba(81, 171, 79, 0.1);
+  background-color: white;
+  width: -webkit-fill-available;
 }
 
 .article {
@@ -567,4 +568,58 @@ li {
 
 .div-img img {
   width: 60%;
+}
+
+.div-img-logo-main {
+  width: 50%;
+}
+
+.img-logo-main {
+  width: -webkit-fill-available;
+}
+
+@media (max-width: 768px) {
+  .div-content {
+    padding: 30px;
+  }
+
+  .div-content h2 {
+    font-size: var(--font-24);
+    text-wrap-style: balance;
+    text-align: -webkit-center;
+    align-self: center;
+  }
+
+  .div-img-what-lng img {
+    width: 100%;
+  }
+
+  .card-who-we-tech {
+    padding: 0;
+  }
+
+  .left {
+    flex-direction: column;
+  }
+
+  .icon-car {
+    position: relative;
+    bottom: 44px;
+    right: -15rem;
+    z-index: 999;
+    transform: scale(1.5);
+  }
+
+  .why-lng-container .card-why-lng {
+    font-size: var(--font-17);
+  }
+
+  .div-title-why-lng {
+      justify-content: center;
+  }
+
+  .div-group-service {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+  }
 }
