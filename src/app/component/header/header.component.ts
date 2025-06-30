@@ -11,14 +11,15 @@ import { filter } from 'rxjs';
 export class HeaderComponent {
 
   langList: any = [
-    { code: 1, name: "Thai", value: "th" },
-    { code: 2, name: "English", value: "en" },
+    { code: 1, name: "TH", value: "th" },
+    { code: 2, name: "EN", value: "en" },
   ]
 
   langLocal: string = "";
   isActiveMarginBTM: boolean = true;
   position: String = "inherit";
-selectedLang: any;
+  selectedLang: any;
+  subMenu: boolean = false;
   constructor(private router: Router, private route: ActivatedRoute, public translate: TranslateService) {
 
 

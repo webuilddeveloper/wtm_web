@@ -81,4 +81,22 @@ a {
   .div-logo {
     align-items: center;
   }
+
+  .title {
+    font-size: var(--font-20);
+  }
+
+  .menu {
+    font-size: var(--font-16);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .div-logo {
+    align-items: center;
+  }
+
+  .main-filter {
+    padding: 60px;
+  }
 }

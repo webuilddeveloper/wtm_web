@@ -75,6 +75,8 @@ export class HomeComponent {
     // },
   ];
 
+  @ViewChild('whoWeTechMakers') whoWeTechMakers!: ElementRef;
+
   constructor(
     private route: ActivatedRoute,
     private serviceProvider: ServiceProvider,
@@ -118,5 +120,9 @@ export class HomeComponent {
     this.router.navigate(["performance-details"], {
       // skipLocationChange: true,
     });
+  }
+
+  scrollToSection() {
+    this.whoWeTechMakers.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }
