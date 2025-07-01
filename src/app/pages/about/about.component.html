@@ -73,10 +73,16 @@
     <h3>
       {{ 'certificate' | translate }}
     </h3>
-    <li>ใบประกาศ 1</li>
-    <li>ใบประกาศ 2</li>
-    <li>ใบประกาศ 3</li>
-    <li>ใบประกาศ 4</li>
+    <li *ngFor="let i of listCertificate; let idx = index">
+      <a href="{{i.fileUrl}}" target="_blank" style="width: fit-content;"
+        *ngIf="translate.currentLang === 'th'">
+        {{i.title}}
+      </a>
+        <a href="{{i.fileUrl}}" target="_blank" style="width: fit-content;"
+        *ngIf="translate.currentLang === 'en'">
+        {{i.titleEN}}
+      </a>
+    </li>
   </div>
 
 
