@@ -10,47 +10,17 @@ import { ServiceProvider } from 'src/app/shared/service-provider.service';
 })
 export class ProductAndServiceComponent {
 
-  isEquipmentSelect: string = "0";
+  isEquipmentSelect: string = "";
   modelEquipment: any = {};
   constructor(private router: Router, private serviceProvider: ServiceProvider, public translate: TranslateService) {}
   performanceList: any = [];
   equipmentList: any = [
-    {
-      code: "0",
-      title: "กล่องควบคุมการทำงาน P&C",
-      description: "รายละเอียดคร่าวๆ กล่องกล่องควบคุมการทำงาน P&C",
-      imageUrl: "./../../../assets/img/lng-mock.png"
-    },
-    {
-      code: "1",
-      title: "ถังรักษาอุณหภูมิ (CNG,LNG)",
-      description: "รายละเอียดคร่าว ๆ ถังรักษาอุณหภูมิ (CNG,LNG)",
-      imageUrl: "./../../../assets/img/lng-mock.png"
-    },
-    {
-      code: "2",
-      title: "Sensors",
-      description: "รายละเอียดคร่าว ๆ Sensors",
-      imageUrl: "./../../../assets/img/lng-mock.png"
-    },
-    {
-      code: "3",
-      title: "หัวฉีด",
-      description: "รายละเอียดคร่าว ๆ หัวฉีด",
-      imageUrl: "./../../../assets/img/lng-mock.png"
-    },
-    {
-      code: "4",
-      title: "อุปกรณ์เปลี่ยนสถานะและควบคุมแรงดัน",
-      description: "รายละเอียดคร่าว ๆ อุปกรณ์เปลี่ยนสถานะและควบคุมแรงดัน",
-      imageUrl: "./../../../assets/img/lng-mock.png"
-    },
+
   ];
 
   ngOnInit(): void {
     this.productRead();
-    this.modelEquipment = this.equipmentList.find((x: any) => x.code == this.isEquipmentSelect);
-
+    this.portfolioRead();
   }
 
   gotoDetails(param: any): void {
@@ -59,15 +29,25 @@ export class ProductAndServiceComponent {
     });
   }
 
+  portfolioRead() {
+    this.serviceProvider
+      .post('m/portfolio/read', { limit: 999 })
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        this.performanceList = model.objectData;
+      });
+  }
+
   productRead() {
     this.serviceProvider
       .post('m/product/read', { limit: 999 })
       .subscribe((data) => {
         let model: any = {};
         model = data;
-        console.log(model.objectData);
-
-        this.performanceList = model.objectData;
+        this.isEquipmentSelect = model.objectData[0].code;
+        this.modelEquipment = model.objectData.find((x: any) => x.code == this.isEquipmentSelect);
+        this.equipmentList = model.objectData;
       });
   }
 
@@ -78,7 +58,13 @@ export class ProductAndServiceComponent {
   }
 
   viewDetail(param: any) {
+
     this.modelEquipment = param;
     this.isEquipmentSelect = param.code;
+  }
+
+  viewDetailMobile(param: any) {
+    this.modelEquipment = this.equipmentList.find((x: any) => x.code == param);
+    this.isEquipmentSelect = param;
   }
 }

@@ -12,15 +12,8 @@
       <h2 *ngIf="translate.currentLang === 'th'">{{aboutMeModel.title}}</h2>
       <h2 *ngIf="translate.currentLang === 'en'">{{aboutMeModel.titleEN}}</h2>
       <div class="spacer"></div>
-      <span>
-        จดทะเบียนก่อตั้งเมื่อวันที่ 4 มิถุนายน 2568 ด้วยทุนจดทะเบียน 1 ล้านบาท
-        โดยกลุ่มวิศวกรและผู้เชี่ยวชาญด้านพลังงาน ที่มีเป้าหมายร่วมกันในการผลักดันการใช้พลังงานสะอาดในประเทศไทย
-        จากจุดเริ่มต้นเล็ก ๆ ในกรุงเทพมหานคร
-        บริษัทได้เริ่มต้นด้วยการให้คำปรึกษาและติดตั้งระบบก๊าซในโรงงานอุตสาหกรรม
-        และได้พัฒนาเทคโนโลยีการแปลงพลังงานอย่างต่อเนื่อง เพื่อยกระดับมาตรฐานการใช้พลังงานของลูกค้าให้ปลอดภัย
-        คุ้มค่า
-        และเป็นมิตรต่อสิ่งแวดล้อม
-      </span>
+      <div [innerHTML]="aboutMeModel.description" *ngIf="translate.currentLang === 'th'"></div>
+      <div [innerHTML]="aboutMeModel.descriptionEN" *ngIf="translate.currentLang === 'en'"></div>
     </div>
   </div>
 
@@ -32,10 +25,9 @@
       {{ 'vision' | translate }}
     </h3>
     <div class="spacer"></div>
-    <span>
-      มุ่งมั่นเป็นผู้นำในการให้บริการระบบพลังงานสะอาดและเทคโนโลยีก๊าซธรรมชาติเหลว (LNG) ที่ได้มาตรฐานระดับสากล
-      เพื่อสนับสนุนอุตสาหกรรมไทยให้เติบโตอย่างยั่งยืน
-    </span>
+    <div [innerHTML]="aboutMeModel.vision" *ngIf="translate.currentLang === 'th'"></div>
+    <div [innerHTML]="aboutMeModel.visionEN" *ngIf="translate.currentLang === 'en'"></div>
+
     <div class="spacer"></div>
   </div>
 
@@ -44,10 +36,13 @@
       {{ 'mission' | translate }}
     </h3>
     <div class="spacer"></div>
-    <li>ให้บริการติดตั้งระบบก๊าซธรรมชาติเหลว (LNG) ที่ปลอดภัย ทันสมัย และมีประสิทธิภาพ</li>
-    <li>คัดสรรและจัดจำหน่ายอุปกรณ์แปลงก๊าซคุณภาพสูงแก่ภาคอุตสาหกรรม</li>
-    <li>สนับสนุนภาคการผลิตให้สามารถเปลี่ยนผ่านสู่พลังงานสะอาด</li>
-    <li>พัฒนาองค์ความรู้และทักษะของทีมงานเพื่อส่งมอบงานที่มีมาตรฐานสูงสุด</li>
+    <ul>
+      <li *ngFor="let i of aboutMeModel.missionList; let idx = index;">
+        <div *ngIf="translate.currentLang === 'th'">{{i.title}}</div>
+        <div *ngIf="translate.currentLang === 'en'">{{i.titleEN}}</div>
+      </li>
+    </ul>
+
   </div>
 
 
@@ -61,7 +56,8 @@
   <div class="manager-grid-container">
     <div class="manager-contain" *ngFor="let i of listEmployee; let idx = index">
       <img class="manager-contain-img" src="{{i.imageUrl}}" alt="Manager">
-      <h4 class="text-content-manager">{{i.title}}</h4>
+      <h4 class="text-content-manager" *ngIf="translate.currentLang === 'th'">{{i.title}}</h4>
+      <h4 class="text-content-manager" *ngIf="translate.currentLang === 'en'">{{i.titleEN}}</h4>
       <h4 class="text-content-manager">{{i.position}}</h4>
     </div>
   </div>
@@ -73,10 +69,20 @@
     <h3>
       {{ 'certificate' | translate }}
     </h3>
-    <li>ใบประกาศ 1</li>
-    <li>ใบประกาศ 2</li>
-    <li>ใบประกาศ 3</li>
-    <li>ใบประกาศ 4</li>
+    <div class="row gy-5">
+      <div class="col-6 col-md-4 col-lg-3" *ngFor="let i of listCertificate; let idx = index">
+        <a class="div-cer" href="{{i.fileUrl}}" target="_blank">
+          <div class="div-icon">
+            <img src="./../../../assets/icons/icon-pdf.png" alt="">
+          </div>
+          <div class="hidden-des">
+            <span *ngIf="translate.currentLang === 'th'" class="title">{{i.title}}</span>
+            <span *ngIf="translate.currentLang === 'en'" class="title">{{i.titleEN}}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 
 

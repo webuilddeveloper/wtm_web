@@ -10,11 +10,13 @@ import { ServiceProvider } from 'src/app/shared/service-provider.service';
 export class AboutComponent implements OnInit {
   constructor(private serviceProvider: ServiceProvider, public translate: TranslateService) {}
   listEmployee: any = [];
+  listCertificate: any = [];
   aboutMeModel: any = {};
 
   ngOnInit(): void {
     this.callRead();
     this.readAboutMe();
+    this.readCertificate();
   }
 
   callRead() {
@@ -36,4 +38,16 @@ export class AboutComponent implements OnInit {
         this.aboutMeModel = model.objectData[0];
       });
   }
+
+  readCertificate() {
+    this.serviceProvider
+      .post('certificate/read', {permission: "all"})
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        this.listCertificate = model.objectData;
+      });
+  }
+
+
 }

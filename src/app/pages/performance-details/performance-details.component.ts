@@ -29,7 +29,7 @@ export class PerformanceDetailsComponent {
 
   readPerformance(code: any) {
     this.serviceProvider
-      .post('m/product/read', { code: code })
+      .post('m/portfolio/read', { code: code })
       .subscribe((data) => {
         let model: any = {};
         model = data;
@@ -37,7 +37,7 @@ export class PerformanceDetailsComponent {
         this.model.newFunctionList = JSON.parse(this.model.functionList);
 
         this.serviceProvider
-          .post('m/product/gallery/read', { code: this.model.code })
+          .post('m/portfolio/gallery/read', { code: this.model.code })
           .subscribe((data) => {
             let model: any = {};
             model = data;

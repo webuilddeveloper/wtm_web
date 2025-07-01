@@ -693,6 +693,10 @@ li {
     padding: 8px 12px;
     border-radius: 10px;
   }
+
+  .content-main .title{
+    font-size: var(--font-16);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {

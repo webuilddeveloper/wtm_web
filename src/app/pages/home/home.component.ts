@@ -9,6 +9,7 @@ import { ServiceProvider } from 'src/app/shared/service-provider.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  aboutMeModel: any = {};
   serviceList: any = [
     {
       title: "ติดตั้ง",
@@ -104,6 +105,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.readNews();
+    this.readAboutMe();
   }
 
   readNews() {
@@ -124,5 +126,15 @@ export class HomeComponent {
 
   scrollToSection() {
     this.whoWeTechMakers.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  readAboutMe() {
+    this.serviceProvider
+      .post('aboutUs/read', {})
+      .subscribe((data) => {
+        let model: any = {};
+        model = data;
+        this.aboutMeModel = model.objectData[0];
+      });
   }
 }

@@ -5,25 +5,36 @@
   <div class="div-content">
     <span class="title">{{ 'ourProducts' | translate }}</span>
     <div class="spacer"></div>
-    <div class="spacer"></div>
+    <div class="spacer d-none d-lg-block"></div>
     <div class="div-equipment">
-      <div class="equipment-bar col-3">
+      <div class="equipment-bar col-12 col-md-3 d-none d-lg-block d-md-block">
         <div class="box-item" *ngFor="let i of equipmentList; let idx = index;">
-          <div class="item" [class.active]="isEquipmentSelect == i.code" (click)="viewDetail(i)">
+          <div class="item" [class.active]="isEquipmentSelect == i.code" (click)="viewDetail(i)" *ngIf="translate.currentLang === 'th'">
             {{i.title}}
+          </div>
+          <div class="item" [class.active]="isEquipmentSelect == i.code" (click)="viewDetail(i)" *ngIf="translate.currentLang === 'en'">
+            {{i.titleEN}}
           </div>
         </div>
       </div>
 
-      <div class="row box-detail-equipment ">
+      <div class="equipment-bar col-12 col-md-3 d-block d-lg-none d-md-none">
+        <select name="" class="dropdown-produce" #langSelect (change)="viewDetailMobile(langSelect.value)">
+          <option value="{{i.code}}" *ngFor="let i of equipmentList; let idx = index;">{{i.title}}</option>
+        </select>
+      </div>
+
+      <div class="row box-detail-equipment col-12 col-md-9">
         <div class="col-12 col-lg-3">
           <div class="div-img">
             <img src="{{modelEquipment.imageUrl}}" alt="" class="img">
           </div>
         </div>
         <div class="col-12 col-lg-9 div-des">
-          <span class="title">{{modelEquipment.title}}</span>
-          <span class="des">{{modelEquipment.description}}</span>
+          <span class="title" *ngIf="translate.currentLang === 'en'">{{modelEquipment.titleEN}}</span>
+          <span class="title" *ngIf="translate.currentLang === 'th'">{{modelEquipment.title}}</span>
+          <div class="des" [innerHTML]="modelEquipment.descriptionEN" *ngIf="translate.currentLang === 'en'"></div>
+          <div class="des" [innerHTML]="modelEquipment.description" *ngIf="translate.currentLang === 'th'"></div>
         </div>
       </div>
     </div>
@@ -49,9 +60,9 @@
   <div class="div-content">
     <span class="title">{{ 'ourServices' | translate }}</span>
     <div class="spacer"></div>
-    <div class="spacer"></div>
+    <div class="spacer d-none d-lg-block"></div>
     <div class="row div-group-service">
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-sale.png" alt="" class="service-icon">
@@ -71,7 +82,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-install.png" alt="" class="service-icon">
@@ -91,7 +102,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-maintain.png" alt="" class="service-icon">
@@ -111,7 +122,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-recomance.png" alt="" class="service-icon">
@@ -131,7 +142,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-course.png" alt="" class="service-icon">
@@ -151,7 +162,7 @@
         </div> -->
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex div-card-service">
+      <div class="col-6 col-md-6 col-lg-4 d-flex div-card-service">
         <div class="card-service">
           <div class="service-head">
             <img src="./../../../assets/icons/icon-credit.png" alt="" class="service-icon">

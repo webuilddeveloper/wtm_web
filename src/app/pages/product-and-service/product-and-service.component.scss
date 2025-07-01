@@ -289,7 +289,7 @@
   border: 1px solid rgba(81, 171, 79, 0.1);
   border-radius: 20px;
   --bs-gutter-x: 0rem;
-  width: -webkit-fill-available;
+  // width: -webkit-fill-available;
 }
 
 .box-detail-equipment .div-des {
@@ -297,4 +297,126 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.dropdown-produce {
+  width: -webkit-fill-available;
+  border: none;
+  height: 30px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .div-content {
+    padding: 25px;
+  }
+
+  .div-equipment {
+    flex-direction: column;
+  }
+
+  .equipment-bar {
+    flex-direction: row;
+  }
+
+  .div-title {
+    margin-bottom: 16px;
+  }
+
+  .div-title .title {
+    font-size: var(--font-26);
+  }
+
+  .title {
+    font-size: var(--font-20);
+  }
+
+  .div-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .div-img img {
+    width: 50% !important;
+  }
+
+  .box-detail-equipment .div-des {
+    padding: 20px;
+  }
+
+  .box-detail-equipment .title {
+    font-size: var(--font-20);
+  }
+
+  .box-detail-equipment .des {
+    font-size: var(--font-16);
+  }
+
+  .service-icon {
+    width: 25px;
+  }
+
+  .service-title {
+    font-size: var(--font-18) !important;
+  }
+
+  .service-text {
+    font-size: var(--font-14) !important;
+  }
+
+  .div-group-service {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+  }
+
+  .service-head {
+    gap: 10px;
+  }
+
+  .card-service {
+    padding: 15px;
+  }
+
+  .card-performance {
+    flex-direction: column;
+  }
+
+  .img-performance {
+    width: -webkit-fill-available;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .div-content {
+    padding: 60px;
+  }
+
+  .div-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .div-img img {
+    width: 50% !important;
+  }
+
+  .card-performance {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .img-performance {
+    width: -webkit-fill-available;
+  }
+
+  .description .title {
+    font-size: var(--font-20);
+  }
+
+  .btn-bottom {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: var(--font-16);
+  }
+
 }

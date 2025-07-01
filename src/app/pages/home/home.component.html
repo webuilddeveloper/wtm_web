@@ -14,12 +14,9 @@
         <div class="spacer"></div>
         <div class="right">
           <div class="col-8 col-md-10 d-flex text-center justify-content-center">
-            <span class="title">
-              มุ่งมั่นเป็นผู้นำในการให้บริการระบบพลังงานสะอาดและเทคโนโลยี
-              <br>ที่ได้มาตรฐานระดับสากลเพื่อสนับสนุนอุตสาหกรรมไทย <br> ให้เติบโตอย่างยั่งยืน
-            </span>
+            <div [innerHTML]="aboutMeModel.vision" class="title" *ngIf="translate.currentLang === 'th'"></div>
+            <div [innerHTML]="aboutMeModel.visionEN" class="title" *ngIf="translate.currentLang === 'en'"></div>
           </div>
-
         </div>
         <div class="spacer"></div>
         <div class="spacer"></div>
@@ -30,7 +27,7 @@
     </div>
   </div>
   <div class="content" #whoWeTechMakers>
-    <div class="content-1" >
+    <div class="content-1">
       <div class="div-content">
         <div class="row bs-x0">
           <div class="col-12 ">
