@@ -109,6 +109,10 @@ h2 {
   overflow: hidden;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .text-tab {
     text-indent: 2em;

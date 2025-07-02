@@ -62,7 +62,10 @@
       <h3>
         {{ 'detail' | translate }}
       </h3>
-      <span *ngIf="model.description != ''">{{model.description}}</span>
+      <div *ngIf="model.description != ''">
+        <div [innerHTML]="model.description" *ngIf="translate.currentLang === 'th'"></div>
+        <div [innerHTML]="model.descriptionEN" *ngIf="translate.currentLang === 'en'"></div>
+      </div>
       <span *ngIf="model.description == ''">-</span>
       <div class="spacer"></div>
     </div>
