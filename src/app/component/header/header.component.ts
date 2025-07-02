@@ -32,9 +32,13 @@ export class HeaderComponent {
       this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           // this.currentPath = event.urlAfterRedirects;
+          debugger
           if (event.urlAfterRedirects == '/') {
             this.isActiveMarginBTM = false;
-            this.position = "absolute"
+            this.position = "absolute";
+          } else {
+            this.isActiveMarginBTM = true;
+            this.position = "inherit"
           }
           console.log('Current path:', event.urlAfterRedirects);
         }
