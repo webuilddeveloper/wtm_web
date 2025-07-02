@@ -1,11 +1,11 @@
-::ng-deep html {
-    overflow-x: hidden;
-}
+// ::ng-deep html {
+//     overflow-x: hidden;
+// }
 
-::ng-deep body {
-    overflow-x: hidden;
+// ::ng-deep body {
+//     overflow-x: hidden;
 
-}
+// }
 
 .bg-circle {
     background: linear-gradient(to right, var(--main-2), var(--main));
@@ -222,6 +222,6 @@
 
 
 .force-scroll {
-    overflow-y: auto !important;
+    // overflow-y: auto !important;
     height: auto !important;
 }

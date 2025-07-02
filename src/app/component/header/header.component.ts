@@ -11,8 +11,8 @@ import { filter } from 'rxjs';
 export class HeaderComponent {
 
   langList: any = [
-    { code: 1, name: "TH", value: "th" },
-    { code: 2, name: "EN", value: "en" },
+    { code: 1, name: "TH", value: "th", icon: "./assets/icons/flag-th.jpg" },
+    { code: 2, name: "EN", value: "en", icon: "./assets/icons/flag-en.jpg" },
   ]
 
   langLocal: string = "";
@@ -29,31 +29,30 @@ export class HeaderComponent {
         window.scrollTo({ top: 0, behavior: 'smooth' }); // เลื่อนไปบนสุดแบบ smooth
       });
 
-      this.router.events.subscribe(event => {
-        if (event instanceof NavigationEnd) {
-          // this.currentPath = event.urlAfterRedirects;
-          debugger
-          if (event.urlAfterRedirects == '/') {
-            this.isActiveMarginBTM = false;
-            this.position = "absolute";
-          } else {
-            this.isActiveMarginBTM = true;
-            this.position = "inherit"
-          }
-          console.log('Current path:', event.urlAfterRedirects);
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // this.currentPath = event.urlAfterRedirects;
+        if (event.urlAfterRedirects == '/') {
+          this.isActiveMarginBTM = false;
+          this.position = "absolute";
+        } else {
+          this.isActiveMarginBTM = true;
+          this.position = "inherit"
         }
-      });
+        console.log('Current path:', event.urlAfterRedirects);
+      }
+    });
 
-      this.langLocal = localStorage.getItem("lang") ?? "th"
-      localStorage.setItem("lang", this.langLocal)
+    this.langLocal = localStorage.getItem("lang") ?? "th"
+    localStorage.setItem("lang", this.langLocal)
 
-      // translate.addLangs(['th', 'en']);
-      translate.setDefaultLang(this.langLocal);
-      // translate.use('th');
+    // translate.addLangs(['th', 'en']);
+    translate.setDefaultLang(this.langLocal);
+    // translate.use('th');
 
-      // const browserLang = translate.getBrowserLang();
-      const browserLang = translate.getDefaultLang();
-      translate.use(browserLang && browserLang.match(/th|en/) ? browserLang : 'th');
+    // const browserLang = translate.getBrowserLang();
+    const browserLang = translate.getDefaultLang();
+    translate.use(browserLang && browserLang.match(/th|en/) ? browserLang : 'th');
   }
 
   scrollPosition: boolean = false;
@@ -89,5 +88,21 @@ export class HeaderComponent {
   changeLanguage(lang: string) {
     this.translate.use(lang);
     localStorage.setItem("lang", lang)
+  }
+
+  isOpen = false;
+  selected = {
+    code: 1, name: "TH", value: "th", icon: "./assets/icons/flag-th.jpg"
+  };
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  selectOption(option: any) {
+    this.selected = option;
+    this.translate.use(option.value);
+    localStorage.setItem("lang", option.value)
+    this.isOpen = false;
   }
 }
