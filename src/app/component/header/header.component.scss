@@ -20,6 +20,17 @@
   height: 40px;
 }
 
+.div-logo-header {
+  // display: flex;
+  // transition: 0.5s;
+}
+
+.div-logo-header:hover {
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px 0px #00743f8f;
+  border: 1px solid transparent;
+}
+
 .menu-group {
   display: flex;
   flex-direction: row;
