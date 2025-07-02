@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>WTM</title>
@@ -39,3 +42,31 @@
   <meta property="og:image:height" content="209">
 
 </head>
+
+<body>
+  <app-root></app-root>
+
+  <div id="bn-root"></div>
+
+  <script>window.onload = function () { BN.init({ version: '1.0' }) }</script>
+  <script>
+      (function (d, s, id) {
+        var js, bjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://console.botnoi.ai/customerchat/index.js';
+        bjs.parentNode.insertBefore(js, bjs);
+      }(document, 'script', 'bn-jssdk'));
+  </script>
+
+  <div class="bn-customerchat" bot_id="6854d524cfc9e2305f142c51"
+    bot_logo="https://bn-sme-production-ap-southeast-1.s3.amazonaws.com/6854d524cfc9e2305f142c51/25443cdd-11b3-4b31-abcf-22effaedb0b9.png"
+    bot_name="WTM Bot" theme_color="#FFFFFF" locale="th"
+    logged_in_greeting="สวัสดี ยินดีต้อนรับเข้าสู่ Live Chat WTM Bot ทำหน้าที่บริการ ต้องการสอบถามเรื่องอะไรค่ะ"
+    greeting_message="สวัสดี ยินดีต้อนรับเข้าสู่ Live Chat WTM Bot ทำหน้าที่บริการ ต้องการสอบถามเรื่องอะไรค่ะ"
+    default_open="false">
+  </div>
+
+</body>
+
+</html>
