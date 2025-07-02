@@ -1,7 +1,7 @@
 <div class="div-header d-none d-lg-block" [ngStyle]="{'position': scrollPosition ? 'fixed' : position}">
   <div class="header">
     <div class="content-header">
-      <img src="./assets/img/logoMain.png" alt="" class="logo-header">
+      <a routerLink=""><img src="./assets/img/logoMain.png" alt="" class="logo-header"></a>
       <div class="menu-group">
         <a routerLink="">{{ 'home' | translate }}</a>
         <a routerLink="./news">{{ 'newsAndEvent' | translate }}</a>
@@ -35,15 +35,15 @@
   </div>
 
   <div class="div-sub-menu" *ngIf="subMenu">
-      <div class="sub-menu">
-        <a routerLink="">{{ 'home' | translate }}</a>
-        <a routerLink="./news">{{ 'newsAndEvent' | translate }}</a>
-        <a routerLink="./product-and-service">{{ 'productAndService' | translate }}</a>
-        <a routerLink="./about">{{ 'aboutMe' | translate }}</a>
-        <a routerLink="./contact">{{ 'contactUs' | translate }}</a>
-      </div>
+    <div class="sub-menu">
+      <a (click)="subMenu = !subMenu" routerLink="">{{ 'home' | translate }}</a>
+      <a (click)="subMenu = !subMenu" routerLink="./news">{{ 'newsAndEvent' | translate }}</a>
+      <a (click)="subMenu = !subMenu" routerLink="./product-and-service">{{ 'productAndService' | translate }}</a>
+      <a (click)="subMenu = !subMenu" routerLink="./about">{{ 'aboutMe' | translate }}</a>
+      <a (click)="subMenu = !subMenu" routerLink="./contact">{{ 'contactUs' | translate }}</a>
     </div>
+  </div>
 
-    <!-- <div class="backdrop" *ngIf="subMenu" (click)="subMenu = false"></div> -->
+  <!-- <div class="backdrop" *ngIf="subMenu" (click)="subMenu = false"></div> -->
 </div>
 <div *ngIf="isActiveMarginBTM" [ngStyle]="{'margin-bottom': scrollPosition ? '112px' : '0'}">&nbsp;</div>
